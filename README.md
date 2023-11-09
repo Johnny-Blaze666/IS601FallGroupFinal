@@ -6,7 +6,7 @@ Each student should put an 'X' under their name on the days they have meetings.
 
 ### November 2023
 
-| Date        | Student 1 | Student 2 |
+| Date        | Johnny Rivera | Xavier Garay |
 |-------------|-----------|-----------|
 | Nov 9 (Thur) |     JR      |     XG      |
 | Nov 10 (Fri)|           |           |
