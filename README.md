@@ -8,7 +8,7 @@ Each student should put an 'X' under their name on the days they have meetings.
 
 | Date        | Student 1 | Student 2 |
 |-------------|-----------|-----------|
-| Nov 9 (Thur) |     JR      |           |
+| Nov 9 (Thur) |     JR      |     XG      |
 | Nov 10 (Fri)|           |           |
 | Nov 15 (Wed)|           |           |
 | Nov 17 (Fri)|           |           |
