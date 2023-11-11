@@ -9,7 +9,7 @@ Each student should put an 'X' under their name on the days they have meetings.
 | Date        | Johnny Rivera | Xavier Garay |
 |-------------|-----------|-----------|
 | Nov 9 (Thur) |     JR      |     XG      |
-| Nov 10 (Fri)|      JR     |           |
+| Nov 10 (Fri)|      JR     |     XG      |
 | Nov 15 (Wed)|           |           |
 | Nov 17 (Fri)|           |           |
 | *Nov 22 (Wed)* |       |           |   <!-- Skipped for Thanksgiving -->
