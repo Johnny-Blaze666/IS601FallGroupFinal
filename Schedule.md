@@ -6,8 +6,8 @@
 |-------------|-----------|-----------|
 | Nov 9 (Thur) |     JR      |     XG      |
 | Nov 10 (Fri)|      JR     |     XG      |
-| Nov 15 (Wed)|           |     XG      |
-| Nov 17 (Fri)|           |      XG     |
+| Nov 15 (Wed)|      JR     |     XG      |
+| Nov 17 (Fri)|      JR     |      XG     |
 | *Nov 22 (Wed)* |       |           |   <!-- Skipped for Thanksgiving -->
 | *Nov 24 (Fri)* |       |           |   <!-- Skipped for Thanksgiving -->
 
