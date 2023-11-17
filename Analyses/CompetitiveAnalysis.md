@@ -16,6 +16,11 @@ This seems to follow **The Hero** archetype by actively identifying and addressi
 * Authority
     * "industry-leading" consultants and "innovative testing methodologies."
     * "Our team of highly skilled consultants employs cutting-edge testing methods."
-## Praetorian
+## [Praetorian](https://www.praetorian.com)
 ### Archetype
+A mix of **The Explorer** and **The Hero** archetypes. Language like "*Locate* your material risks..." and "...several *steps ahead* of attackers." appeal to The Explorer. Describing their "*force multiplier*" and talking about how they "*Strengthen* your organization’s *security posture* and through *adversarial* emulation" appeals to The Hero. 
 ### Methods of Persuasion
+* Consensus 
+    * Provides customer testimonials
+* Commitment  and Consistency
+    * "We are obsessed with your satisfaction"
