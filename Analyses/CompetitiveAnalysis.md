@@ -1,7 +1,7 @@
 # Competitive Analysis
 ## [Bancsec](https://www.bancsec.com)
 ### Archetype
-Seems to be a mix of **The Creator** and **The Sage** archetypes. It uses language like *forges* and *builds*. They also seem to ask many rhetorical questions that imply they have the answers.
+Seems to be a mix of **The Creator** and **The Sage** archetypes. It uses language like *forges* and *builds* which aligns with The Creator. They also seem to ask many rhetorical questions that imply they have the answers which is well aligned with The Sage.
 ### Methods of Persuasion
 * Commitment and Consistency
     * "it is our mission to be at your service"
