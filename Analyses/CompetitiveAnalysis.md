@@ -1,4 +1,8 @@
 # Competitive Analysis
+## Index
+[Bancsec](#bancsec)
+[White Oak Security](#white-oak-security)
+[Praetorian](#praetorian)
 ## [Bancsec](https://www.bancsec.com)
 ### Archetype
 Seems to be a mix of **The Creator** and **The Sage** archetypes. It uses language like *forges* and *builds* which aligns with The Creator. They also seem to ask many rhetorical questions that imply they have the answers which is well aligned with The Sage.
