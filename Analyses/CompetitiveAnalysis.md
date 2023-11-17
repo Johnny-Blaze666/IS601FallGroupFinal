@@ -9,9 +9,13 @@ Seems to be a mix of **The Creator** and **The Sage** archetypes. It uses langua
 * Consensus
     * "95% of our business comes from client referrals"
     * "...guarantees 100% satisfaction for all assessment services"
-## White Oak Security
+## [White Oak Security](https://www.whiteoaksecurity.com)
 ### Archetype
+This seems to follow **The Hero** archetype by actively identifying and addressing security vulnerabilities, helping organizations strengthen their defenses, and guiding them through the process of remediation. The language used in the text emphasizes the proactive and protective nature of the services offered, which is in line with the Hero archetype's traits.
 ### Methods of Persuasion
+* Authority
+    * "industry-leading" consultants and "innovative testing methodologies."
+    * "Our team of highly skilled consultants employs cutting-edge testing methods."
 ## Praetorian
 ### Archetype
 ### Methods of Persuasion
