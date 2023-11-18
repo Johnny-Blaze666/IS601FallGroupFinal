@@ -18,10 +18,16 @@
 ## [Opportunities]
 **Identify areas where the orgnization can continue to grow**
 * Emerging needs for our products and services. 
-* Social media presence. 
-* Lack of competition in the Region. 
+    * Develop Security Training programs to help raise organizational security awareness
+* Social media presence.
+    * Create content to post to social media sites and raise information security awareness, and highlight organizational talent.
+* Lack of competition in the Region.
+    * Develop relationship with local businesses. 
 ## [Threats]
 **Identify risks to the orgnization**
 * Potential competitors
+    * Larger compettitors may look to move into/recruit local talent. 
 * Negative media
-* Market instability. 
+    * Potential of a poor cutomer experience leading to negative reviews.  
+* Market instability.
+    * Market disruption/small portfolio of client. 
