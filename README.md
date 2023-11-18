@@ -1,5 +1,6 @@
 # IS601 Online
-Meeting schedule and history can be found [here](Schedule.md)
+* [Schedule](Schedule.md)
+* [Customer Journey](CustomerJourney.md)
 
 # Analyses
 [Competitive Analysis](./Analyses/CompetitiveAnalysis.md)
