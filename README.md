@@ -3,4 +3,5 @@
 * [Customer Journey](CustomerJourney.md)
 
 # Analyses
-[Competitive Analysis](./Analyses/CompetitiveAnalysis.md)
+* [Competitive Analysis](./Analyses/CompetitiveAnalysis.md)
+* [SWOT](./Analyses/SWOT.md)
