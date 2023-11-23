@@ -8,7 +8,7 @@
 | Nov 10 (Fri)|      JR     |     XG      |
 | Nov 15 (Wed)|      JR     |     XG      |
 | Nov 17 (Fri)|      JR     |      XG     |
-| Nov 22 (Wed) |       |      XG     | 
+| Nov 22 (Wed) |   JR    |      XG     | 
 | *Nov 24 (Fri)* |       |           |   <!-- Skipped for Thanksgiving -->
 
 ### December 2023
