@@ -13,9 +13,9 @@
 
 ### December 2023
 
-| Date        | Student 1 | Student 2 |
+| Date        | Johnny Rivera | Xavier Garay |
 |-------------|-----------|-----------|
-| Nov 29 (Wed)|           |           |          
+| Nov 29 (Wed)|           |     XG      |          
 | Dec 1 (Fri) |           |           |
 | Dec 6 (Wed) |           |           |
 | Dec 8 (Fri) |           |           |
