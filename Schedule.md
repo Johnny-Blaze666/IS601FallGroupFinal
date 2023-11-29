@@ -15,7 +15,7 @@
 
 | Date        | Johnny Rivera | Xavier Garay |
 |-------------|-----------|-----------|
-| Nov 29 (Wed)|           |     XG      |          
+| Nov 29 (Wed)|     JR      |     XG      |          
 | Dec 1 (Fri) |           |           |
 | Dec 6 (Wed) |           |           |
 | Dec 8 (Fri) |           |           |
