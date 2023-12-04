@@ -11,6 +11,9 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+        <video autoPlay muted loop className={utilStyles.video}>
+            <source src="/heroMountainBackground.mp4" type="video/mp4"/>
+        </video>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>
