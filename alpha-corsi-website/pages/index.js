@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import PartnerCard from '../components/partnerCard';
 
 export default function Home({ allPostsData }) {
   return (
@@ -42,6 +43,13 @@ export default function Home({ allPostsData }) {
             We partner closely with leaders in the cybersecurity industry to deliver the best in class solutions to
             ensure our clients needs are being met
           </p>
+
+          <div className={utilStyles.partnerCardsGroup}>
+            <PartnerCard image="/images/companies/crowdstrike.png" companyName="CrowdStrike" companyColor="#FF0000" link="/#CrowdStrike" />
+            <PartnerCard image="/images/companies/microsoft.png" companyName="Microsoft" useImageSize='true' link="/#Microsoft" />
+            <PartnerCard image="/images/companies/okta.png" companyName="Okta" link="/#Okta" />
+            <PartnerCard image="/images/companies/taegis.png" companyName="Taegis" companyColor="#2B00BB" link="/#Taegis" />
+          </div>
         </div>
 
       </div>
