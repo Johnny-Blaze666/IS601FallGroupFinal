@@ -1,7 +1,48 @@
 .container {
-  max-width: 36rem;
-  padding: 0 1rem;
-  margin: 3rem auto 6rem;
+
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background-color: #EE9251;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  padding: 0.5rem 0;
+}
+
+.leftNav {
+  display: flex;
+  margin-left: 2%;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+}
+
+.alphacorsiNav, .otherNav {
+  color: black;
+}
+
+.alphacorsiNav {
+  font-weight: 800;
+}
+
+.otherNav {
+  font-weight: 500;
+}
+
+.rightNavButton {
+  margin-right: 2%;
+  background-color: black;
+  border-radius: 0.3rem;
+  padding: 0.25rem 1rem;
+  display: inline-block;
+}
+
+.contactUsNav {
+  color: white;
+  font-weight: 400;
 }
 
 .header {
