@@ -11,17 +11,31 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-        <video autoPlay muted loop className={utilStyles.video}>
-            <source src="/heroMountainBackground.mp4" type="video/mp4"/>
-        </video>
 
+      <div className={utilStyles.mainContainer}>
         <div className={utilStyles.hero}>
-          <h1>AlphaCorsi</h1>
-          <p>A boutique Information Security consultancy firm</p>
-          <div className={utilStyles.learnmoreButton}>
-            <Link href='/#learn-more' className={utilStyles.learnmoreText}>Learn More</Link>
+          <video autoPlay muted loop className={utilStyles.video}>
+              <source src="/heroMountainBackground.mp4" type="video/mp4"/>
+          </video>
+
+          <div className={utilStyles.heroContent}>
+            <h1>AlphaCorsi</h1>
+            <p>A boutique Information Security consultancy firm</p>
+            <div className={utilStyles.learnmoreButton}>
+              <Link href='/#learn-more' className={utilStyles.learnmoreText}>Learn More</Link>
+            </div>
           </div>
         </div>
+
+        <div className={utilStyles.about}>
+          <h3>CyberSecurity Consulting</h3>
+          <p>
+            At AlphaCorsi, we are your partner in effectively implementing  security technologies tailored to your
+            organizational needs. Our team of experts can assist in identifying gaps, reducing risk,
+            regulatory compliance, vulnerability management and more.
+          </p>
+        </div>
+      </div>
     </Layout>
   );
 }
