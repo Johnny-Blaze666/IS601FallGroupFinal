@@ -24,10 +24,10 @@
 }
 
 .learnmoreButton {
-  margin-right: 2%;
+  margin-top: 5%;
   background-color: black;
   border-radius: 0.3rem;
-  padding: 0.25rem 1rem;
+  padding: 1.5rem 8rem;
   display: inline-block;
 }
 
