@@ -35,6 +35,15 @@ export default function Home({ allPostsData }) {
             regulatory compliance, vulnerability management and more.
           </p>
         </div>
+
+        <div className={utilStyles.partners}>
+          <h3>Our Trusted Partners</h3>
+          <p>
+            We partner closely with leaders in the cybersecurity industry to deliver the best in class solutions to
+            ensure our clients needs are being met
+          </p>
+        </div>
+
       </div>
     </Layout>
   );
