@@ -6,6 +6,35 @@
   z-index: -1;
 }
 
+.hero {
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 500%;
+  margin: 1%;
+}
+
+.hero p {
+  font-size: 150%;
+  font-weight: 500;
+}
+
+.learnmoreButton {
+  margin-right: 2%;
+  background-color: black;
+  border-radius: 0.3rem;
+  padding: 0.25rem 1rem;
+  display: inline-block;
+}
+
+.learnmoreText {
+  color: white;
+}
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
