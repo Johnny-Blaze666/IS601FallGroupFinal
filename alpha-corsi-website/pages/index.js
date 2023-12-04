@@ -12,7 +12,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-      <div className={utilStyles.container}>
+      <div className={utilStyles.mainContainer}>
         <div className={utilStyles.hero}>
           <video autoPlay muted loop className={utilStyles.video}>
               <source src="/heroMountainBackground.mp4" type="video/mp4"/>

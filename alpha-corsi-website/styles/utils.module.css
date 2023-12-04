@@ -1,5 +1,6 @@
-.container {
+.mainContainer {
   position: relative;
+  z-index: -100;
 }
 
 .hero {
@@ -44,7 +45,12 @@
   align-items: center;
 }
 
+.about h3 {
+  font-size: 150%;
+}
+
 .about p {
+  font-size: 100%;
   width: 40%;
   text-align: center;
 }
