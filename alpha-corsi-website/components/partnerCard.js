@@ -13,9 +13,7 @@ export default function PartnerCard({ image, companyName, companyColor, useImage
 
             <div className={styles.text}>
                 <h2 style={{ color: companyColor ? companyColor : "black" }}>{companyName}</h2>
-                <Link href={link}>
-                    See More &gt;
-                </Link>
+                <Link href={link} className={styles.link}>See More &gt;</Link>
             </div>
         </div>
     )
