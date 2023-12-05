@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
 import PartnerCard from '../components/partnerCard';
+import ServiceCard from '../components/serviceCard';
 
 export default function Home({ allPostsData }) {
   return (
@@ -49,6 +50,23 @@ export default function Home({ allPostsData }) {
             <PartnerCard image="/images/companies/microsoft.png" companyName="Microsoft" useImageSize='true' link="/#Microsoft" />
             <PartnerCard image="/images/companies/okta.png" companyName="Okta" link="/#Okta" />
             <PartnerCard image="/images/companies/taegis.png" companyName="Taegis" companyColor="#2B00BB" link="/#Taegis" />
+          </div>
+        </div>
+
+        <div className={utilStyles.services}>
+          <div className={utilStyles.accolades}>
+
+          </div>
+          <h3>Services</h3>
+          <div className={utilStyles.servicesCards}>
+            <ServiceCard image="/images/services/managedSecServProv.png" service="Managed Security Service Provider" link="/#MSSP"
+                         tagline="MSSP, Extended Detection and Response, Intrusion Detection/Intrusion Prevention Systems" />
+            <ServiceCard image="/images/services/govRiskComp.png" service="Governance, Risk, and Compliance" link="/#GRC"
+                         tagline="Gap Assessments, Risk Analysis, Compliance Framework vCISO" />
+            <ServiceCard image="/images/services/incidentResponse.png" service="Incident Response" link="/#IR"
+                         tagline="Incident Responsse Preparation, Table Top Exercises, Security Breach Guidance" />
+            <ServiceCard image="/images/services/penTesting.png" service="Penetration Testing" link="/#PT"
+                         tagline="Phishing, Vishing, Social Engineering, Security Controls Assessments" />
           </div>
         </div>
 

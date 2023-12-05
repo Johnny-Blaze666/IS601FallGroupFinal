@@ -91,6 +91,26 @@
   width: 70%;
 }
 
+.services {
+  background-color: #F2F2F2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.servicesCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  grid-row-gap: 8em;
+}
+
+
+
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
