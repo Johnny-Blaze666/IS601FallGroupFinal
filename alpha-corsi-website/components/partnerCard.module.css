@@ -1,0 +1,20 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    background-color: white;
+    width: 100%;
+}
+
+.text h2 {
+    text-align: center;
+    font-weight: normal;
+}
+
+.link {
+    color: black;
+    padding-left: 10%;
+}

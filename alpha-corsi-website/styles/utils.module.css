@@ -1,6 +1,5 @@
 .mainContainer {
   position: relative;
-  z-index: -100;
 }
 
 .hero {
@@ -34,6 +33,18 @@
   font-weight: 500;
 }
 
+.learnmoreButton {
+  margin-top: 5%;
+  background-color: black;
+  border-radius: 0.3rem;
+  padding: 1.5rem 8rem;
+  display: inline-block;
+}
+
+.learnmoreText {
+  color: white;
+}
+
 .about {
   position: relative;
   height:35vh;
@@ -50,21 +61,34 @@
 }
 
 .about p {
-  font-size: 100%;
   width: 40%;
   text-align: center;
 }
 
-.learnmoreButton {
-  margin-top: 5%;
-  background-color: black;
-  border-radius: 0.3rem;
-  padding: 1.5rem 8rem;
-  display: inline-block;
+.partners {
+  background-color: #99B6D4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
 
-.learnmoreText {
-  color: white;
+.partners h3 {
+  font-size: 170%;
+  font-weight: bold;
+}
+
+.partners p {
+  margin: 0;
+}
+
+.partnerCardsGroup {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
 }
 
 .heading2Xl {

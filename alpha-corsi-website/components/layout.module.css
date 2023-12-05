@@ -1,5 +1,11 @@
 .container {
-  z-index: 1100;
+
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar {
@@ -9,6 +15,7 @@
   background-color: #EE9251;
   justify-content: space-between;
   padding: 0.5rem 0;
+  z-index: 1000;
 }
 
 .leftNav {
@@ -42,12 +49,6 @@
 .contactUsNav {
   color: white;
   font-weight: 400;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .backToHome {
