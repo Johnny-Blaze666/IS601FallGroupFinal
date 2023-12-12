@@ -101,6 +101,44 @@
   height: 100vh;
 }
 
+.accolades {
+  position: relative;
+  display: flex;
+}
+
+.accolades .C10Icon {
+
+}
+
+.accolades .text {
+  background-color: black;
+  color: white;
+  padding-left: 2vw;
+  width: 30vw;
+  margin: 0;
+  flex: 1;
+}
+
+.accolades h4 {
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+
+.accolades p, .accolades a {
+  padding-left: 1vw;
+}
+
+.accolades p {
+  margin-top: 0;
+  font-size: 2em;
+  line-height: 1.2;
+}
+
+.accolades a {
+  color: white;
+  font-size: 90%;
+}
+
 .servicesCards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

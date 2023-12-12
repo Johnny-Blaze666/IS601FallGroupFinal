@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
@@ -55,6 +56,14 @@ export default function Home({ allPostsData }) {
 
         <div className={utilStyles.services}>
           <div className={utilStyles.accolades}>
+            <div className={utilStyles.C10Icon}>
+              <Image src="/images/services/c10Icon.png" alt="C10 Review" width={300} height={300} objectFit='contain' />
+            </div>
+            <div className={utilStyles.text}>
+              <h4>Accolades</h4>
+              <p>10 Most Promising Cybersecurity Consulting Companies</p>
+              <Link href="/#accolades">Read More</Link>
+            </div>
 
           </div>
           <h3>Services</h3>
