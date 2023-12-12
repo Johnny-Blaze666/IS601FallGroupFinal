@@ -123,16 +123,35 @@ export default function Home({ allPostsData }) {
           </div>
         </div>
 
-      </div>
-    </Layout>
+            <div className={utilStyles.testimonials}>
+                <div className={utilStyles.testimonial}>
+                    <h3>
+                        "Your penetration test was one of the most comprehensive external tests that were performed
+                        against out organization"
+                    </h3>
+                    <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} objectFit='contain' />
+                    <p>Mary L., CISO</p>
+                </div>
+
+                <div className={utilStyles.testimonial}>
+                    <h3>
+                        "Your team provided us with a new perspective and is considered beyond being compliant with the regulations"
+                    </h3>
+                    <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} objectFit='contain' />
+                    <p>Kristen R, VP Information Security Manager</p>
+                </div>
+            </div>
+
+        </div>
+      </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
+    const allPostsData = getSortedPostsData();
+    return {
+        props: {
+            allPostsData,
+        },
+    };
 }
