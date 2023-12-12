@@ -31,7 +31,6 @@ export default function Home({ allPostsData }) {
     setCurrent((current - 1 + partners.length) % partners.length);
   };
 
-
   return (
       <Layout home>
         <Head>
