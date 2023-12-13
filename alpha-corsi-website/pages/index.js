@@ -10,6 +10,47 @@ import PartnerCard from '../components/partnerCard';
 import ServiceCard from '../components/serviceCard';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
+// Add this new component for the subscription form
+const SubscribeForm = () => {
+    const [email, setEmail] = useState('');
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        // Call the API route to handle the subscription
+        const response = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email }),
+        });
+
+        const data = await response.json();
+        if (data.error) {
+            // Handle error
+            console.error(data.error);
+        } else {
+            // Handle success
+            console.log('Subscribed!');
+            setEmail(''); // Clear the input field after successful subscription
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <label htmlFor="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+            />
+            <button type="submit">Subscribe</button>
+        </form>
+    );
+};
 export default function Home({ allPostsData }) {
   const partners = [
     { image: "/images/companies/crowdstrike.png", companyName: "CrowdStrike", companyColor: "#FF0000", link: "/#CrowdStrike" },
@@ -139,6 +180,12 @@ export default function Home({ allPostsData }) {
                     </h3>
                     <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} objectFit='contain' />
                     <p>Kristen R, VP Information Security Manager</p>
+                </div>
+            </div>
+
+            <div className={utilStyles.contactUs} id="contact-us">
+                <div className={utilStyles.contactUs} id="contact-us">
+                    <SubscribeForm/>
                 </div>
             </div>
 
