@@ -11,6 +11,30 @@ import PartnerCard from '../components/partnerCard';
 import ServiceCard from '../components/serviceCard';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
+const SocialIcons = () => {
+    const circleStyle = {
+        display: 'inline-flex',
+        borderRadius: '50%',
+        border: '2px solid #EE9251',
+        padding: '10px',
+        margin: '5px',
+        justifyContent: 'center',
+        alignItems: 'center',
+        overflow: 'hidden',
+        backgroundColor: 'white', // Dark blue background
+    };
+
+    return (
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div style={circleStyle}><Image src="/images/companies/logos/blogger.svg" alt="Blogger" width={50} height={50} objectFit="contain" /></div>
+            <div style={circleStyle}><Image src="/images/companies/logos/instagram.svg" alt="Instagram" width={50} height={50} objectFit="contain" /></div>
+            <div style={{...circleStyle, backgroundColor: '#000000'}}><Image src="/images/companies/logos/x.svg" alt="X" width={50} height={50} objectFit="contain" /></div>
+            <div style={circleStyle}><Image src="/images/companies/logos/facebook.png" alt="Facebook" width={50} height={50} objectFit="contain" /></div>
+            <div style={circleStyle}><Image src="/images/companies/logos/linkedin.png" alt="LinkedIn" width={50} height={50} objectFit="contain" /></div>
+        </div>
+    );
+};
+
 // Add this new component for the subscription form
 const SubscribeForm = () => {
     const [email, setEmail] = useState('');
@@ -144,7 +168,7 @@ export default function Home({ allPostsData }) {
         <div className={utilStyles.services}>
           <div className={utilStyles.accolades}>
             <div className={utilStyles.C10Icon}>
-              <Image src="/images/services/c10Icon.png" alt="C10 Review" width={300} height={300} objectFit='contain' />
+              <Image src="/images/services/c10Icon.png" alt="C10 Review" width={300} height={300} style={{ objectFit: "cover" }} />
             </div>
             <div className={utilStyles.text}>
               <h4>Accolades</h4>
@@ -172,7 +196,7 @@ export default function Home({ allPostsData }) {
                         "Your penetration test was one of the most comprehensive external tests that were performed
                         against our organization"
                     </h3>
-                    <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} objectFit='contain' />
+                    <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} style={{ objectFit: "cover" }} />
                     <p>Mary L., CISO</p>
                 </div>
 
@@ -180,7 +204,7 @@ export default function Home({ allPostsData }) {
                     <h3>
                         "Your team provided us with a new perspective and is considered beyond being compliant with the regulations"
                     </h3>
-                    <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} objectFit='contain' />
+                    <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} style={{ objectFit: "cover" }} />
                     <p>Kristen R, VP Information Security Manager</p>
                 </div>
             </div>
@@ -189,6 +213,23 @@ export default function Home({ allPostsData }) {
                 <div className={utilStyles.contactUs} id="contact-us">
                     <SubscribeForm/>
                 </div>
+            </div>
+
+            <div className={utilStyles.footer} id={"footer"}>
+                <div className={utilStyles.footerLinks}>
+                    <Link href='/#'>Services</Link>
+                    <Link href='/#'>Email</Link>
+                    <Link href='/#'>Contact us</Link>
+                    <h2><Link href='/#'>ALPHACORSI</Link></h2>
+                    <Link href='/#'>About</Link>
+                    <Link href='/#'>Social</Link>
+                    <Link href='/#'>Support</Link>
+                </div>
+
+                <div className={utilStyles.footerBorder}></div>
+
+                <SocialIcons />
+
             </div>
 
         </div>
