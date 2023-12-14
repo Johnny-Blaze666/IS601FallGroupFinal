@@ -168,7 +168,7 @@ export default function Home({ allPostsData }) {
                 <div className={utilStyles.testimonial}>
                     <h3>
                         "Your penetration test was one of the most comprehensive external tests that were performed
-                        against out organization"
+                        against our organization"
                     </h3>
                     <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} objectFit='contain' />
                     <p>Mary L., CISO</p>
