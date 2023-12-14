@@ -19,4 +19,4 @@
 | Dec 1 (Fri) |     JR      |     XG      |
 | Dec 6 (Wed) |           |           |
 | Dec 8 (Fri) |           |           |
-| Dec 13 (Wed)|           |           |
+| Dec 13 (Wed)|     JR      |           |
