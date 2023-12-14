@@ -17,6 +17,6 @@
 |-------------|-----------|-----------|
 | Nov 29 (Wed)|     JR      |     XG      |          
 | Dec 1 (Fri) |     JR      |     XG      |
-| Dec 6 (Wed) |           |           |
-| Dec 8 (Fri) |           |           |
-| Dec 13 (Wed)|     JR      |           |
+| Dec 6 (Wed) |           |           | <!-- Skipped because Xavier had COVID -->
+| Dec 8 (Fri) |           |           | <!-- Skipped because Xavier had COVID -->
+| Dec 13 (Wed)|     JR      |     XG      |
