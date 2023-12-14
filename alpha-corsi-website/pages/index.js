@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
+import styles from '../styles/subscribe.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
@@ -37,17 +38,18 @@ const SubscribeForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email:</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
+        <form onSubmit={handleSubmit} className={styles.form}>
+            <label htmlFor="email" className={styles.label}>Let's get in touch</label>
+            <input className={styles.input}
+                   type="email"
+                   placeholder="email"
+                   id="email"
+                   name="email"
+                   value={email}
+                   onChange={(e) => setEmail(e.target.value)}
+                   required
             />
-            <button type="submit">Subscribe</button>
+            <button type="submit" className={styles.button}>Contact Us</button>
         </form>
     );
 };

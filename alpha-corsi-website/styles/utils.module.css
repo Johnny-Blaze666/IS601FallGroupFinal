@@ -263,6 +263,14 @@
   align-items: center;
 }
 
+.contactUs {
+  background-color: #99B6D4;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 .heading2Xl {
