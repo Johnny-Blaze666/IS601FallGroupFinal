@@ -16,6 +16,12 @@
 
 .footerLinks a {
     color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footerLinks a:hover {
+    text-shadow: 0 0 10px #ffffff;
 }
 
 .footerBorder {
