@@ -103,6 +103,8 @@
   transform: translateX(-50%); /* Adjust horizontal position to truly center */
   width: 250px; /* Set a fixed width or use a percentage */
   height: 250px; /* Set a fixed height */
+  display: flex;
+  transition: transform 0.3s ease-in-out;
 }
 
 .partnerCardsContainer {
@@ -270,6 +272,12 @@
   align-items: center;
   justify-content: center;
 }
+
+
+
+
+
+
 
 
 

@@ -9,7 +9,10 @@ import Link from 'next/link';
 import Date from '../components/date';
 import PartnerCard from '../components/partnerCard';
 import ServiceCard from '../components/serviceCard';
+import SocialMedia from '../components/socialmedia';
+import Footer from '../components/footer';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 
 // Add this new component for the subscription form
 const SubscribeForm = () => {
@@ -144,7 +147,7 @@ export default function Home({ allPostsData }) {
         <div className={utilStyles.services}>
           <div className={utilStyles.accolades}>
             <div className={utilStyles.C10Icon}>
-              <Image src="/images/services/c10Icon.png" alt="C10 Review" width={300} height={300} objectFit='contain' />
+              <Image src="/images/services/c10Icon.png" alt="C10 Review" width={300} height={300} style={{ objectFit: "cover" }} />
             </div>
             <div className={utilStyles.text}>
               <h4>Accolades</h4>
@@ -166,30 +169,34 @@ export default function Home({ allPostsData }) {
           </div>
         </div>
 
-            <div className={utilStyles.testimonials}>
-                <div className={utilStyles.testimonial}>
-                    <h3>
-                        "Your penetration test was one of the most comprehensive external tests that were performed
-                        against our organization"
-                    </h3>
-                    <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} objectFit='contain' />
-                    <p>Mary L., CISO</p>
-                </div>
-
-                <div className={utilStyles.testimonial}>
-                    <h3>
-                        "Your team provided us with a new perspective and is considered beyond being compliant with the regulations"
-                    </h3>
-                    <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} objectFit='contain' />
-                    <p>Kristen R, VP Information Security Manager</p>
-                </div>
+        <div className={utilStyles.testimonials}>
+            <div className={utilStyles.testimonial}>
+                <h3>
+                    "Your penetration test was one of the most comprehensive external tests that were performed
+                    against our organization"
+                </h3>
+                <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} style={{ objectFit: "cover" }} />
+                <p>Mary L., CISO</p>
             </div>
 
+            <div className={utilStyles.testimonial}>
+                <h3>
+                    "Your team provided us with a new perspective and is considered beyond being compliant with the regulations"
+                </h3>
+                <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} style={{ objectFit: "cover" }} />
+                <p>Kristen R, VP Information Security Manager</p>
+            </div>
+        </div>
+
+        <div className={utilStyles.contactUs} id="contact-us">
             <div className={utilStyles.contactUs} id="contact-us">
-                <div className={utilStyles.contactUs} id="contact-us">
-                    <SubscribeForm/>
-                </div>
+                <SubscribeForm/>
             </div>
+        </div>
+
+        <Footer />
+
+
 
         </div>
       </Layout>
