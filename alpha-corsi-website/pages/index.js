@@ -12,28 +12,17 @@ import ServiceCard from '../components/serviceCard';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const SocialIcons = () => {
-    const circleStyle = {
-        display: 'inline-flex',
-        borderRadius: '50%',
-        border: '2px solid #EE9251',
-        padding: '10px',
-        margin: '5px',
-        justifyContent: 'center',
-        alignItems: 'center',
-        overflow: 'hidden',
-        backgroundColor: 'white', // Dark blue background
-    };
-
     return (
         <div style={{display: 'flex', justifyContent: 'center'}}>
-            <div style={circleStyle}><Image src="/images/companies/logos/blogger.svg" alt="Blogger" width={50} height={50} objectFit="contain" /></div>
-            <div style={circleStyle}><Image src="/images/companies/logos/instagram.svg" alt="Instagram" width={50} height={50} objectFit="contain" /></div>
-            <div style={{...circleStyle, backgroundColor: '#000000'}}><Image src="/images/companies/logos/x.svg" alt="X" width={50} height={50} objectFit="contain" /></div>
-            <div style={circleStyle}><Image src="/images/companies/logos/facebook.png" alt="Facebook" width={50} height={50} objectFit="contain" /></div>
-            <div style={circleStyle}><Image src="/images/companies/logos/linkedin.png" alt="LinkedIn" width={50} height={50} objectFit="contain" /></div>
+            <div className={utilStyles.socialMedia}><Image src="/images/companies/logos/Blogger.png" alt="Blogger" width={70} height={70} objectFit="contain" /></div>
+            <div className={utilStyles.socialMedia}><Image src="/images/companies/logos/Instagram.png" alt="Instagram" width={70} height={70} objectFit="contain" /></div>
+            <div className={utilStyles.socialMediaX}><Image src="/images/companies/logos/X.png" alt="X" width={70} height={70} objectFit="contain" /></div>
+            <div className={utilStyles.socialMedia}><Image src="/images/companies/logos/Facebook.png" alt="Facebook" width={70} height={70} objectFit="contain" /></div>
+            <div className={utilStyles.socialMedia}><Image src="/images/companies/logos/LinkedIn.png" alt="LinkedIn" width={70} height={70} objectFit="contain" /></div>
         </div>
     );
 };
+
 
 // Add this new component for the subscription form
 const SubscribeForm = () => {

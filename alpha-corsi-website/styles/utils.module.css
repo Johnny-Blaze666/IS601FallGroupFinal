@@ -298,6 +298,29 @@
   height: 0.5%;
 }
 
+.socialMedia {
+  display: inline-flex;
+  border-radius: 50%;
+  border: 2px solid #EE9251;
+  padding: 10px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.socialMediaX {
+  display: inline-flex;
+  border-radius: 50%;
+  border: 2px solid #EE9251;
+  padding: 10px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000000;
+}
+
 
 
 
