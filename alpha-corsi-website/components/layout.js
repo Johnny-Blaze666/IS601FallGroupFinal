@@ -15,8 +15,8 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="AlphaCorsi"
+          content="Secure your business with an extensive array of services."
         />
         <meta
           property="og:image"
@@ -27,13 +27,6 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Script
-        src="https://connect.facebook.net/en_US/sdk.js"
-        strategy="lazyOnload"
-        onLoad={() =>
-          console.log(`script loaded correctly, window.FB has been populated`)
-        }
-      />
       <header className={styles.header}>
         <nav className={styles.navbar}>
             <div className={styles.leftNav}>

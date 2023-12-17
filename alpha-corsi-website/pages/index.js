@@ -9,19 +9,8 @@ import Link from 'next/link';
 import Date from '../components/date';
 import PartnerCard from '../components/partnerCard';
 import ServiceCard from '../components/serviceCard';
+import SocialMedia from '../components/socialmedia';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-
-const SocialIcons = () => {
-    return (
-        <div style={{display: 'flex', justifyContent: 'center'}}>
-            <div className={utilStyles.socialMedia}><Image src="/images/companies/logos/Blogger.png" alt="Blogger" width={70} height={70} objectFit="contain" /></div>
-            <div className={utilStyles.socialMedia}><Image src="/images/companies/logos/Instagram.png" alt="Instagram" width={70} height={70} objectFit="contain" /></div>
-            <div className={utilStyles.socialMediaX}><Image src="/images/companies/logos/X.png" alt="X" width={70} height={70} objectFit="contain" /></div>
-            <div className={utilStyles.socialMedia}><Image src="/images/companies/logos/Facebook.png" alt="Facebook" width={70} height={70} objectFit="contain" /></div>
-            <div className={utilStyles.socialMedia}><Image src="/images/companies/logos/LinkedIn.png" alt="LinkedIn" width={70} height={70} objectFit="contain" /></div>
-        </div>
-    );
-};
 
 
 // Add this new component for the subscription form
@@ -217,7 +206,13 @@ export default function Home({ allPostsData }) {
 
                 <div className={utilStyles.footerBorder}></div>
 
-                <SocialIcons />
+                <div className={utilStyles.socialLinks}>
+                    <SocialMedia image='/images/companies/logos/blogger.svg' link='google' ariaLabel='Blogger'/>
+                    <SocialMedia image='/images/companies/logos/instagram.svg' link='google' ariaLabel='Instagram'/>
+                    <SocialMedia image='/images/companies/logos/x.svg' link='google' ariaLabel='X, formerly Twitter'/>
+                    <SocialMedia image='/images/companies/logos/facebook.svg' link='google' ariaLabel='Facebook'/>
+                    <SocialMedia image='/images/companies/logos/linkedin.svg' link='google' ariaLabel='LinkedIn'/>
+                </div>
 
             </div>
 
