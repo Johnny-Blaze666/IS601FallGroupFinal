@@ -169,32 +169,32 @@ export default function Home({ allPostsData }) {
           </div>
         </div>
 
-            <div className={utilStyles.testimonials}>
-                <div className={utilStyles.testimonial}>
-                    <h3>
-                        "Your penetration test was one of the most comprehensive external tests that were performed
-                        against our organization"
-                    </h3>
-                    <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} style={{ objectFit: "cover" }} />
-                    <p>Mary L., CISO</p>
-                </div>
-
-                <div className={utilStyles.testimonial}>
-                    <h3>
-                        "Your team provided us with a new perspective and is considered beyond being compliant with the regulations"
-                    </h3>
-                    <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} style={{ objectFit: "cover" }} />
-                    <p>Kristen R, VP Information Security Manager</p>
-                </div>
+        <div className={utilStyles.testimonials}>
+            <div className={utilStyles.testimonial}>
+                <h3>
+                    "Your penetration test was one of the most comprehensive external tests that were performed
+                    against our organization"
+                </h3>
+                <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} style={{ objectFit: "cover" }} />
+                <p>Mary L., CISO</p>
             </div>
 
+            <div className={utilStyles.testimonial}>
+                <h3>
+                    "Your team provided us with a new perspective and is considered beyond being compliant with the regulations"
+                </h3>
+                <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} style={{ objectFit: "cover" }} />
+                <p>Kristen R, VP Information Security Manager</p>
+            </div>
+        </div>
+
+        <div className={utilStyles.contactUs} id="contact-us">
             <div className={utilStyles.contactUs} id="contact-us">
-                <div className={utilStyles.contactUs} id="contact-us">
-                    <SubscribeForm/>
-                </div>
+                <SubscribeForm/>
             </div>
+        </div>
 
-            <Footer />
+        <Footer />
 
 
 
