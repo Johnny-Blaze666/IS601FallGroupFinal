@@ -36,9 +36,12 @@ export default function Layout({ children, home }) {
                 <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
             </div>
 
-            <div className={styles.rightNavButton}>
-                <Link href='/#contact-us' className={styles.contactUsNav}>Contact Us</Link>
-            </div>
+            <Link href='/#contact-us' className={styles.rightNavButton}>
+                <div>
+                    <p className={styles.contactUsNav}>Contact Us</p>
+                </div>
+            </Link>
+
         </nav>
       </header>
       <main>{children}</main>
