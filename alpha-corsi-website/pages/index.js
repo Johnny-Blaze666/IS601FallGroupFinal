@@ -90,11 +90,13 @@ export default function Home({ allPostsData }) {
             </video>
 
             <div className={utilStyles.heroContent}>
-              <h1>AlphaCorsi</h1>
-              <p>A boutique Information Security consultancy firm</p>
-              <div className={utilStyles.learnmoreButton}>
-                <Link href='/#learn-more' className={utilStyles.learnmoreText}>Learn More</Link>
-              </div>
+                <h1>AlphaCorsi</h1>
+                <p>A boutique Information Security consultancy firm</p>
+                <Link href='/#learn-more'>
+                    <div className={utilStyles.learnmoreButton}>
+                        <p className={utilStyles.learnmoreText}>Learn More</p>
+                    </div>
+                </Link>
             </div>
           </div>
 
