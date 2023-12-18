@@ -12,7 +12,8 @@ export default function App({ Component, pageProps }) {
                   background: 'rgba(255,255,255,0.85)',
                   borderRadius: '20px',
                   width: '90vw',
-                  margin: '10px 5vw'
+                  margin: '10px 5vw',
+                  alignItems: 'center'
               }}
               buttonStyle={{
                   color: 'white',
