@@ -32,7 +32,7 @@ export default function Layout({ children, home }) {
             <div className={styles.leftNav}>
                 <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
                 <Link href='/#services' className={styles.otherNav}>Services</Link>
-                <Link href='/#about' className={styles.otherNav}>About</Link>
+                <Link href='/about' className={styles.otherNav}>About</Link>
                 <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
             </div>
 
@@ -45,11 +45,6 @@ export default function Layout({ children, home }) {
         </nav>
       </header>
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )}
     </div>
   );
 }
