@@ -58,10 +58,10 @@ const SubscribeForm = () => {
 };
 export default function Home({ allPostsData }) {
   const partners = [
-    { image: "/images/companies/CrowdStrike.png", companyName: "CrowdStrike", companyColor: "#FF0000", link: "/#CrowdStrike" },
-    { image: "/images/companies/Microsoft.png", companyName: "Microsoft", useImageSize: 'true', link: "/#Microsoft" },
-    { image: "/images/companies/Okta.png", companyName: "Okta", link: "/#Okta" },
-    { image: "/images/companies/Taegis.png", companyName: "Taegis", companyColor: "#2B00BB", link: "/#Taegis" },
+    { image: "/images/companies/CrowdStrike.svg", companyName: "CrowdStrike", companyColor: "#FF0000", link: "/#CrowdStrike" },
+    { image: "/images/companies/Microsoft.svg", companyName: "Microsoft", link: "/#Microsoft" },
+    { image: "/images/companies/Okta.svg", companyName: "Okta", link: "/#Okta" },
+    { image: "/images/companies/Taegis.svg", companyName: "Taegis", companyColor: "#2B00BB", link: "/#Taegis" },
   ];
 
   const [current, setCurrent] = useState(0);
