@@ -1,22 +1,20 @@
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
-import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
+import Image from 'next/image';
 
 export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>AlphaCorsi {postData.title}</title>
       </Head>
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
-        </div>
+
+      <div className={utilStyles.servicePageContent}>
+        <h1 className={utilStyles.serviceTitle}>{postData.titleLong}</h1>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
+      </div>
     </Layout>
   );
 }

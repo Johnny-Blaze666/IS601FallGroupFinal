@@ -286,6 +286,30 @@
 
 
 
+
+.servicePageContent {
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.serviceTitle {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
