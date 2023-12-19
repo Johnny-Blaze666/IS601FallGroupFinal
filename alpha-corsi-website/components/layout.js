@@ -1,12 +1,30 @@
 import Head from 'next/head';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Script from 'next/script';
 import styles from './layout.module.css';
 import Link from 'next/link';
+
 export const companyName = 'AlphaCorsi';
 export const siteTitle = companyName + ' Security';
 
 export default function Layout({ children, home }) {
+    const [open, setOpen] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        // Run after initial render
+        setIsDesktop(window.innerWidth >= 768);
+        // Add event listener for window resize
+        window.addEventListener('resize', () => {
+            setIsDesktop(window.innerWidth >= 768);
+        });
+    }, []);
+
+    const handleClick = () => {
+        setOpen(!open);
+    }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -26,18 +44,50 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         <nav className={styles.navbar}>
-            <div className={styles.leftNav}>
-                <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
-                <Link href='/services' className={styles.otherNav}>Services</Link>
-                <Link href='/about' className={styles.otherNav}>About</Link>
-                <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
-            </div>
+            {isDesktop && (
+                <div className={styles.headline}>
+                    <div className={styles.leftNav}>
+                        <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
+                        <Link href='/services' className={styles.otherNav}>Services</Link>
+                        <Link href='/about' className={styles.otherNav}>About</Link>
+                        <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
+                    </div>
 
-            <Link href='/#contact-us' className={styles.rightNavButton}>
-                <div>
-                    <p className={styles.contactUsNav}>Contact Us</p>
+                    <Link href='/#contact-us' className={styles.rightNavButton}>
+                        <div>
+                            <p className={styles.contactUsNav}>Contact Us</p>
+                        </div>
+                    </Link>
                 </div>
-            </Link>
+            )}
+
+            {(!isDesktop) && (
+                <>
+                    <div className={styles.headline}>
+                        <Image
+                            src='images/navMenuMobileIcon.svg'
+                            alt='Navigation Menu'
+                            width={60} height={60}
+                            className={styles.hamburger}
+                            onClick={handleClick} />
+                        <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
+                        <Link href='/#contact-us' className={styles.rightNavButton}>
+                            <div>
+                                <p className={styles.contactUsNav}>Contact Us</p>
+                            </div>
+                        </Link>
+                    </div>
+
+                    {open && (
+                        <div className={styles.leftNav}>
+                            <Link href='/services' className={styles.otherNav}>Services</Link>
+                            <Link href='/about' className={styles.otherNav}>About</Link>
+                            <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
+                        </div>
+                    )}
+                </>
+
+            )}
 
         </nav>
       </header>
