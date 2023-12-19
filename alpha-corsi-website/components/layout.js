@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Script from 'next/script';
 import styles from './layout.module.css';
 import Link from 'next/link';
+
 export const companyName = 'AlphaCorsi';
 export const siteTitle = companyName + ' Security';
 
@@ -19,6 +20,10 @@ export default function Layout({ children, home }) {
             setIsDesktop(window.innerWidth >= 768);
         });
     }, []);
+
+    const handleClick = () => {
+        setOpen(!open);
+    }
 
   return (
     <div className={styles.container}>
@@ -64,7 +69,7 @@ export default function Layout({ children, home }) {
                             alt='Navigation Menu'
                             width={60} height={60}
                             className={styles.hamburger}
-                            onClick={() => setOpen(!open)} />
+                            onClick={handleClick} />
                         <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
                         <Link href='/#contact-us' className={styles.rightNavButton}>
                             <div>

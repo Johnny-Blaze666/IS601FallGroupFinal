@@ -6,12 +6,15 @@ import utilStyles from '../styles/utils.module.css';
 import styles from '../styles/subscribe.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
-import Date from '../components/date';
 import PartnerCard from '../components/partnerCard';
 import ServiceCard from '../components/serviceCard';
 import SocialMedia from '../components/socialmedia';
 import Footer from '../components/footer';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 
 // Add this new component for the subscription form
@@ -64,19 +67,6 @@ export default function Home({ allPostsData }) {
     { image: "/images/companies/Taegis.svg", companyName: "Taegis", companyColor: "#2B00BB", link: "/#Taegis" },
   ];
 
-  const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState('next');
-
-  const handleNext = () => {
-    setDirection('next');
-    setCurrent((current + 1) % partners.length);
-  };
-
-  const handlePrev = () => {
-    setDirection('prev');
-    setCurrent((current - 1 + partners.length) % partners.length);
-  };
-
   return (
       <Layout home>
         <Head>
@@ -116,32 +106,28 @@ export default function Home({ allPostsData }) {
                 ensure our clients needs are being met
             </p>
             <div className={utilStyles.partnerCardsContainer}>
-                <button onClick={handlePrev} className={utilStyles.buttonCircle}>
-                    <i className={`${utilStyles.arrow} ${utilStyles.left}`}></i>
-                </button>
 
-                <div className={utilStyles.partnerCardsGroup}>
-                    <TransitionGroup>
-                        <CSSTransition
-                            key={current}
-                            timeout={300}
-                            classNames={{
-                                enter: direction === 'next' ? utilStyles.slideEnterFromRight : utilStyles.slideEnterFromLeft,
-                                enterActive: utilStyles.slideEnterActive,
-                                exit: utilStyles.slideExit,
-                                exitActive: direction === 'next' ? utilStyles.slideExitToLeft : utilStyles.slideExitToRight,
-                            }}
-                        >
-                            <div className={utilStyles.partnerCardContainer}>
-                                <PartnerCard {...partners[current]} />
-                            </div>
-                        </CSSTransition>
-                    </TransitionGroup>
-                </div>
+            <div style={{width:'250px'}}>
+                <Swiper style={{
+                    "--swiper-theme-color": "black",
+                    "--swiper-pagination-bottom": "25px"
+                }}
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={50}
+                    navigation
+                    autoplay={true}
+                    pagination={{ clickable: true }}
+                    slidesPerView={1}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    <SwiperSlide><PartnerCard image='/images/companies/CrowdStrike.svg' companyName='CrowdStrike' link='/#CrowdStrike' companyColor='#FF0000' /></SwiperSlide>
+                    <SwiperSlide><PartnerCard image='/images/companies/Microsoft.svg' companyName='Microsoft' link='/#Microsoft'/></SwiperSlide>
+                    <SwiperSlide><PartnerCard image='/images/companies/Okta.svg' companyName='Okta' link='/#Okta'/></SwiperSlide>
+                    <SwiperSlide><PartnerCard image='/images/companies/Taegis.svg' companyName='Taegis' link='/#Taegis'/></SwiperSlide>
+                </Swiper>
+            </div>
 
-                <button onClick={handleNext} className={utilStyles.buttonCircle}>
-                    <i className={`${utilStyles.arrow} ${utilStyles.right}`}></i>
-                </button>
             </div>
 
         </div>

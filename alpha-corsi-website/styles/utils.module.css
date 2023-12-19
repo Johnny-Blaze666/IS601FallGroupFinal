@@ -91,118 +91,6 @@
   margin: 0;
 }
 
-.partnerCardsGroup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative; /* Add this to position children absolutely */
-  overflow: hidden; /* Hide overflow content */
-  width: 350px;
-  height: 500px; /* Set the height of the visible frame */
-}
-
-.partnerCardContainer {
-  position: absolute;
-  top: 10%;
-  left: 50%; /* Center the card horizontally */
-  transform: translateX(-50%); /* Adjust horizontal position to truly center */
-  width: 250px; /* Set a fixed width or use a percentage */
-  height: 250px; /* Set a fixed height */
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-}
-
-.partnerCardsContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Add this CSS to your styles/utils.module.css file */
-.buttonCircle {
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-right: 10px; /* For the previous button */
-  margin-left: 10px; /* For the next button */
-}
-
-.buttonCircle:hover {
-  background-color: #e0e0e0;
-}
-
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.left {
-  transform: rotate(135deg);
-}
-
-.right {
-  transform: rotate(-45deg);
-}
-
-/* Add these styles for the transition animations */
-.cardTransition-enter {
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-.cardTransition-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-
-.cardTransition-exit {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.cardTransition-exit-active {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 300ms, transform 300ms;
-}
-
-.slideEnterFromRight {
-  transform: translateX(100%);
-}
-
-.slideEnterFromLeft {
-  transform: translateX(-100%);
-}
-
-.slideEnterActive {
-  transform: translateX(0);
-  transition: transform 300ms ease-in-out;
-}
-
-.slideExit {
-  transform: translateX(0);
-}
-
-.slideExitToLeft {
-  transform: translateX(-100%);
-  transition: transform 300ms ease-in-out;
-}
-
-.slideExitToRight {
-  transform: translateX(100%);
-  transition: transform 300ms ease-in-out;
-}
-
 .services {
   background-color: #F2F2F2;
   position: relative;
@@ -323,7 +211,13 @@
 
 
 
+@media (max-width: 768px) {
+  .accolades {
+    display: none;
+  }
 
+
+}
 
 
 
