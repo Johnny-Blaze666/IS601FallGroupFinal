@@ -89,6 +89,11 @@
 
 .partners p {
   margin: 0;
+  text-align: center;
+}
+
+.partnerCardsContainer {
+  padding-top: 10%;
 }
 
 .services {

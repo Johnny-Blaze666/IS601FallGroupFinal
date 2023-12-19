@@ -107,26 +107,26 @@ export default function Home({ allPostsData }) {
             </p>
             <div className={utilStyles.partnerCardsContainer}>
 
-            <div style={{width:'250px'}}>
-                <Swiper style={{
-                    "--swiper-theme-color": "black",
-                    "--swiper-pagination-bottom": "25px"
-                }}
-                    modules={[Navigation, Pagination]}
-                    spaceBetween={50}
-                    navigation
-                    autoplay={true}
-                    pagination={{ clickable: true }}
-                    slidesPerView={1}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                >
-                    <SwiperSlide><PartnerCard image='/images/companies/CrowdStrike.svg' companyName='CrowdStrike' link='/#CrowdStrike' companyColor='#FF0000' /></SwiperSlide>
-                    <SwiperSlide><PartnerCard image='/images/companies/Microsoft.svg' companyName='Microsoft' link='/#Microsoft'/></SwiperSlide>
-                    <SwiperSlide><PartnerCard image='/images/companies/Okta.svg' companyName='Okta' link='/#Okta'/></SwiperSlide>
-                    <SwiperSlide><PartnerCard image='/images/companies/Taegis.svg' companyName='Taegis' link='/#Taegis'/></SwiperSlide>
-                </Swiper>
-            </div>
+                <div style={{width:'250px'}}>
+                    <Swiper style={{
+                        "--swiper-theme-color": "black",
+                        "--swiper-pagination-bottom": "25px"
+                    }}
+                        modules={[Navigation, Pagination]}
+                        spaceBetween={50}
+                        navigation
+                        autoplay={true}
+                        pagination={{ clickable: true }}
+                        slidesPerView={1}
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}
+                    >
+                        <SwiperSlide><PartnerCard image='/images/companies/CrowdStrike.svg' companyName='CrowdStrike' link='/#CrowdStrike' companyColor='#FF0000' /></SwiperSlide>
+                        <SwiperSlide><PartnerCard image='/images/companies/Microsoft.svg' companyName='Microsoft' link='/#Microsoft'/></SwiperSlide>
+                        <SwiperSlide><PartnerCard image='/images/companies/Okta.svg' companyName='Okta' link='/#Okta'/></SwiperSlide>
+                        <SwiperSlide><PartnerCard image='/images/companies/Taegis.svg' companyName='Taegis' link='/#Taegis'/></SwiperSlide>
+                    </Swiper>
+                </div>
 
             </div>
 
