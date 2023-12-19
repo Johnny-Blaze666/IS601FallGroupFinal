@@ -67,7 +67,7 @@ export default function Layout({ children, home }) {
                         <Image
                             src='images/navMenuMobileIcon.svg'
                             alt='Navigation Menu'
-                            width={60} height={60}
+                            width={50} height={50}
                             className={styles.hamburger}
                             onClick={handleClick} />
                         <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
@@ -78,11 +78,11 @@ export default function Layout({ children, home }) {
                         </Link>
                     </div>
 
-                    {open && (
+                    {(open && !isDesktop) && (
                         <div className={styles.leftNav}>
-                            <Link href='/services' className={styles.otherNav}>Services</Link>
-                            <Link href='/about' className={styles.otherNav}>About</Link>
-                            <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
+                            <Link href='/services' className={`${styles.otherNav} ${styles.left1}`}>Services</Link>
+                            <Link href='/about' className={`${styles.otherNav} ${styles.left2}`}>About</Link>
+                            <Link href='/#follow-us' className={`${styles.otherNav} ${styles.left3}`}>Follow Us</Link>
                         </div>
                     )}
                 </>
