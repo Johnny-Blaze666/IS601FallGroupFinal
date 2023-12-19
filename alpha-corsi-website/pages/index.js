@@ -169,7 +169,7 @@ export default function Home({ allPostsData }) {
             <ServiceCard image="/images/services/penTesting.png" service="Penetration Testing" link="/#PT"
                          tagline="Phishing, Vishing, Social Engineering, Security Controls Assessments" />
           </div>
-            <Link href='/services'>View All</Link>
+            <Link href='/services' className={utilStyles.servicesLinkButton}>View All</Link>
         </div>
 
         <div className={utilStyles.testimonials}>
