@@ -78,13 +78,11 @@ export default function Layout({ children, home }) {
                         </Link>
                     </div>
 
-                    {(open && !isDesktop) && (
-                        <div className={styles.leftNav}>
-                            <Link href='/services' className={`${styles.otherNav} ${styles.left1}`}>Services</Link>
-                            <Link href='/about' className={`${styles.otherNav} ${styles.left2}`}>About</Link>
-                            <Link href='/#follow-us' className={`${styles.otherNav} ${styles.left3}`}>Follow Us</Link>
-                        </div>
-                    )}
+                    <div className={styles.leftNav} style={open ? {display: 'block'} : {display: 'none'}}>
+                        <Link href='/services' className={`${styles.otherNav} ${styles.left1}`} style={open ? {display: 'block'} : {display: 'none'}}>Services</Link>
+                        <Link href='/about' className={`${styles.otherNav} ${styles.left2}`} style={open ? {display: 'block'} : {display: 'none'}}>About</Link>
+                        <Link href='/#follow-us' className={`${styles.otherNav} ${styles.left3}`} style={open ? {display: 'block'} : {display: 'none'}}>Follow Us</Link>
+                    </div>
                 </>
 
             )}
