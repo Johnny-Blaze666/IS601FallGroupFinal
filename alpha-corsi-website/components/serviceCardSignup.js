@@ -8,8 +8,8 @@ export default function ServiceCardSignup({ image, service, caption, link  }) {
                 <Image src={image} alt={service} width={60} height={60}/>
                 <h2>{service}</h2>
                 <p>{caption}</p>
-                <Link href={link} className={styles.link}>Start Now</Link>
             </div>
+            <Link href={link} className={styles.link}>Start Now</Link>
         </div>
     )
 }
