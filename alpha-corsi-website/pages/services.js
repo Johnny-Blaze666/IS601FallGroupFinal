@@ -66,7 +66,9 @@ export default function Services() {
                     <p>Contact us for a free consultation on our services.</p>
                     <Link href="/services/#contact-us" className={servicesStyles.link}>Contact Us</Link>
                 </div>
-                <Footer />
+                <div className={servicesStyles.footerCustomStyling}>
+                    <Footer opacity={0.75}/>
+                </div>
 
             </div>
 

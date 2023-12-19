@@ -4,9 +4,9 @@ import SocialMedia from "./socialmedia";
 
 
 
-export default function Footer() {
+export default function Footer({ opacity }) {
     return (
-        <div className={styles.footer} id={"footer"}>
+        <div className={styles.footer} id={"footer"} style={{ '--opacity': opacity }}>
             <div className={styles.footerLinks}>
                 <Link href='/services'>Services</Link>
                 <Link href='/#contact-us'>Email</Link>

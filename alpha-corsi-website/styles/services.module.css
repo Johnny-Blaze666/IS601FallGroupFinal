@@ -1,5 +1,8 @@
 .mainContainer {
-    background-color: #F2F2F2;
+    background-image: url('../public/images/services/pageBackground.jpg');
+    background-repeat: no-repeat;
+
+    background-position: top;
     padding-top: 5%;
     height: auto;
     text-align: center;
@@ -50,4 +53,8 @@
 .link:hover {
     text-decoration: none;
     background-color: #252525;
+}
+
+.footerCustomStyling {
+    padding-bottom: 30vh;
 }

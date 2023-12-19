@@ -197,7 +197,7 @@ export default function Home({ allPostsData }) {
             </div>
         </div>
 
-        <Footer />
+        <Footer opacity={1}/>
 
 
 
