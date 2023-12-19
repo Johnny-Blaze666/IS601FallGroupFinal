@@ -1,13 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
-
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-
-const name = '[Your Name]';
-export const siteTitle = 'AlphaCorsi Security';
+export const companyName = 'AlphaCorsi';
+export const siteTitle = companyName + ' Security';
 
 export default function Layout({ children, home }) {
   return (
@@ -31,7 +28,7 @@ export default function Layout({ children, home }) {
         <nav className={styles.navbar}>
             <div className={styles.leftNav}>
                 <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
-                <Link href='/#services' className={styles.otherNav}>Services</Link>
+                <Link href='/services' className={styles.otherNav}>Services</Link>
                 <Link href='/about' className={styles.otherNav}>About</Link>
                 <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
             </div>

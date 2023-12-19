@@ -92,7 +92,7 @@ export default function Home({ allPostsData }) {
             <div className={utilStyles.heroContent}>
                 <h1>AlphaCorsi</h1>
                 <p>A boutique Information Security consultancy firm</p>
-                <Link href='/#learn-more'>
+                <Link href='/about'>
                     <div className={utilStyles.learnmoreButton}>
                         <p className={utilStyles.learnmoreText}>Learn More</p>
                     </div>
@@ -169,6 +169,7 @@ export default function Home({ allPostsData }) {
             <ServiceCard image="/images/services/penTesting.png" service="Penetration Testing" link="/#PT"
                          tagline="Phishing, Vishing, Social Engineering, Security Controls Assessments" />
           </div>
+            <Link href='/services' className={utilStyles.servicesLinkButton}>View All</Link>
         </div>
 
         <div className={utilStyles.testimonials}>
@@ -196,7 +197,7 @@ export default function Home({ allPostsData }) {
             </div>
         </div>
 
-        <Footer />
+        <Footer opacity={1}/>
 
 
 

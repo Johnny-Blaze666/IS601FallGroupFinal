@@ -1,4 +1,4 @@
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { companyName } from '../components/layout';
 import Image from 'next/image';
 import aboutStyles from '../styles/about.module.css';
 import Head from "next/head";
@@ -8,7 +8,7 @@ export default function About() {
     return (
         <Layout about>
             <Head>
-                <title>{siteTitle}</title>
+                <title>{companyName} About</title>
             </Head>
 
             <div className={aboutStyles.mainContainer}>
