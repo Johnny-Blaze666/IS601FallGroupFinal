@@ -39,39 +39,50 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         <nav className={styles.navbar}>
-            <Image
-                src='images/navMenuMobileIcon.svg'
-                alt='Navigation Menu'
-                width={60} height={60}
-                className={styles.hamburger}
-                onClick={() => setOpen(!open)} />
-
             {isDesktop && (
-                <div className={styles.leftNav}>
-                    <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
-                    <Link href='/services' className={styles.otherNav}>Services</Link>
-                    <Link href='/about' className={styles.otherNav}>About</Link>
-                    <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
-                </div>
-            )}
+                <div className={styles.headline}>
+                    <div className={styles.leftNav}>
+                        <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
+                        <Link href='/services' className={styles.otherNav}>Services</Link>
+                        <Link href='/about' className={styles.otherNav}>About</Link>
+                        <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
+                    </div>
 
-            {open && (
-                <div className={styles.leftNav}>
-                    <Link href='/services' className={styles.otherNav}>Services</Link>
-                    <Link href='/about' className={styles.otherNav}>About</Link>
-                    <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
+                    <Link href='/#contact-us' className={styles.rightNavButton}>
+                        <div>
+                            <p className={styles.contactUsNav}>Contact Us</p>
+                        </div>
+                    </Link>
                 </div>
             )}
 
             {(!isDesktop) && (
-                <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
-            )}
+                <>
+                    <div className={styles.headline}>
+                        <Image
+                            src='images/navMenuMobileIcon.svg'
+                            alt='Navigation Menu'
+                            width={60} height={60}
+                            className={styles.hamburger}
+                            onClick={() => setOpen(!open)} />
+                        <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
+                        <Link href='/#contact-us' className={styles.rightNavButton}>
+                            <div>
+                                <p className={styles.contactUsNav}>Contact Us</p>
+                            </div>
+                        </Link>
+                    </div>
 
-            <Link href='/#contact-us' className={styles.rightNavButton}>
-                <div>
-                    <p className={styles.contactUsNav}>Contact Us</p>
-                </div>
-            </Link>
+                    {open && (
+                        <div className={styles.leftNav}>
+                            <Link href='/services' className={styles.otherNav}>Services</Link>
+                            <Link href='/about' className={styles.otherNav}>About</Link>
+                            <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
+                        </div>
+                    )}
+                </>
+
+            )}
 
         </nav>
       </header>
