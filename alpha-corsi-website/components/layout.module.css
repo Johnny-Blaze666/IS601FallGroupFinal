@@ -1,5 +1,6 @@
 .container {
 
+  align-items: center;
 }
 
 .header {
@@ -67,6 +68,52 @@
   align-items: center;
 }
 
-.backToHome {
-  margin: 3rem 0 0;
+.hamburger {
+  display: none;
+  margin-left: 5px;
+  background-color: #8d8d8d;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background-color: #EE9251;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+  }
+
+  .leftNav {
+    margin-top: 20px;
+    display: flex;
+    margin-left: 2%;
+    justify-content: space-between;
+    width: 30rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .rightNavButton {
+    position: absolute;
+    right: 2%;
+  }
+
+  .alphacorsiNav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+  }
 }
