@@ -3,6 +3,7 @@ import Layout, { companyName } from '../components/layout';
 import Image from 'next/image';
 import styles from '../styles/signup.module.css';
 import Head from "next/head";
+import Select from 'react-select';
 import Link from "next/link";
 
 export default function Signup() {
@@ -25,6 +26,17 @@ export default function Signup() {
         }
     });
 
+    const options = [
+        { value: 'governance', label: 'Governance' },
+        { value: 'compliance', label: 'Compliance' },
+        { value: 'riskAnalysis', label: 'Risk Analysis' },
+        { value: 'IAM', label: 'Identity Access Management' },
+        { value: 'cloudSecurityAssessments', label: 'Cloud Security Assessments' },
+        { value: 'incidentResponse', label: 'Incident Response' },
+        { value: 'managedSecurityServices', label: 'Managed Security Services' },
+        { value: 'informationSecuritySupport', label: 'Information Security Support' },
+    ];
+
     const handleChange = (e) => {
         setFormState({
             ...formState,
@@ -32,13 +44,17 @@ export default function Signup() {
         });
     };
 
-    const handleCheckboxChange = (e) => {
+    const handleSelectChange = (selectedOptions) => {
+        // Create an object with the selected options as keys and true as values
+        const selectedServices = selectedOptions.reduce((services, option) => {
+            services[option.value] = true;
+            return services;
+        }, {});
+
+        // Update your form state
         setFormState({
             ...formState,
-            checkboxGroup: {
-                ...formState.checkboxGroup,
-                [e.target.name]: e.target.checked
-            }
+            checkboxGroup: selectedServices
         });
     };
 
@@ -74,8 +90,10 @@ export default function Signup() {
                         <div className={styles.imageContent}>
                             <h1>Ready to Get Started?</h1>
                         </div>
-                        <p>Have more questions?</p>
-                        <p>Let's get in touch!</p>
+                        <div className={styles.textContent}>
+                            <p>Have more questions?</p>
+                            <p>Let's get in touch!</p>
+                        </div>
                     </div>
 
                     <form onSubmit={handleSubmit} className={styles.form}>
@@ -108,34 +126,19 @@ export default function Signup() {
                         </div>
 
                         <div style={{width: '100%'}}>
-                            <p>How can we help you?</p>
-                        </div>
+                            <div style={{width: '100%'}}>
+                                <p>How can we help you?</p>
+                            </div>
 
-                        <div className={styles.formCheckboxes}>
-                            <label className={styles.label}>
-                                <input type="checkbox" name="governance" checked={formState.checkboxGroup.governance} onChange={handleCheckboxChange} /> Governance
-                            </label>
-                            <label className={styles.label}>
-                                <input type="checkbox" name="compliance" checked={formState.checkboxGroup.compliance} onChange={handleCheckboxChange} /> Compliance
-                            </label>
-                            <label className={styles.label}>
-                                <input type="checkbox" name="riskAnalysis" checked={formState.checkboxGroup.riskAnalysis} onChange={handleCheckboxChange} /> Risk Analysis
-                            </label>
-                            <label className={styles.label}>
-                                <input type="checkbox" name="IAM" checked={formState.checkboxGroup.IAM} onChange={handleCheckboxChange} /> Identity and Access Management
-                            </label>
-                            <label className={styles.label}>
-                                <input type="checkbox" name="cloudSecurityAssessments" checked={formState.checkboxGroup.cloudSecurityAssessments} onChange={handleCheckboxChange} /> Cloud Security Assessments
-                            </label>
-                            <label className={styles.label}>
-                                <input type="checkbox" name="incidentResponse" checked={formState.checkboxGroup.incidentResponse} onChange={handleCheckboxChange} /> Incident Response
-                            </label>
-                            <label className={styles.label}>
-                                <input type="checkbox" name="managedSecurityServices" checked={formState.checkboxGroup.managedSecurityServices} onChange={handleCheckboxChange} /> Managed Security Services
-                            </label>
-                            <label className={styles.label}>
-                                <input type="checkbox" name="informationSecuritySupport" checked={formState.checkboxGroup.informationSecuritySupport} onChange={handleCheckboxChange} /> Information Security Support
-                            </label>
+                            <div style={{width: '100%'}}>
+                                <Select
+                                    className={styles.formCheckboxes}
+                                    options={options}
+                                    isMulti
+                                    closeMenuOnSelect={false}
+                                    onChange={handleSelectChange}
+                                />
+                            </div>
                         </div>
 
                         <button type="submit"  className={styles.button}>Get Started</button>
