@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Script from 'next/script';
 import styles from './layout.module.css';
 import Link from 'next/link';

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import styles from './serviceCardSignup.module.css';
 export default function ServiceCardSignup({ image, service, caption, link  }) {

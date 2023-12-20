@@ -1,6 +1,6 @@
 import '../styles/global.css';
 import CookieConsent from "react-cookie-consent";
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 export default function App({ Component, pageProps }) {
   return (

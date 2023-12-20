@@ -1,5 +1,5 @@
 import Layout, { companyName } from '../components/layout';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import aboutStyles from '../styles/about.module.css';
 import Head from "next/head";
 import Link from "next/link";
