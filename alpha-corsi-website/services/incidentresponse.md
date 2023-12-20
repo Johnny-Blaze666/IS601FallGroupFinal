@@ -1,6 +1,6 @@
 ---
-title: 'Incidence Response'
-titleLong: 'Incidence Response'
+title: 'IncidentResponse'
+titleLong: 'Incident Response'
 imagePath: '/images/services/incidentResponseLarge.svg'
 ---
 

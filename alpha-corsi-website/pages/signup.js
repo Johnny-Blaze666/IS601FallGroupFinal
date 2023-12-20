@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'
 import Layout, { companyName } from '../components/layout';
 import styles from '../styles/signup.module.css';
 import Head from "next/head";
 import Select from 'react-select';
+import { useRouter } from 'next/router'
+
 
 export default function Signup() {
+    const router = useRouter()
+    const { service } = router.query
+
     const [formState, setFormState] = useState({
         firstName: '',
         lastName: '',
@@ -18,11 +23,23 @@ export default function Signup() {
             riskAnalysis: false,
             IAM: false,
             cloudSecurityAssessments: false,
-            incidentResponse: false,
-            managedSecurityServices: false,
+            IncidentResponse: false,
+            MSSP: false,
             informationSecuritySupport: false
         }
     });
+
+    useEffect(() => {
+        if (service) {
+            setFormState(prevState => ({
+                ...prevState,
+                checkboxGroup: {
+                    ...prevState.checkboxGroup,
+                    [service]: true
+                }
+            }));
+        }
+    }, [service]);
 
     const options = [
         { value: 'governance', label: 'Governance' },
@@ -30,10 +47,12 @@ export default function Signup() {
         { value: 'riskAnalysis', label: 'Risk Analysis' },
         { value: 'IAM', label: 'Identity Access Management' },
         { value: 'cloudSecurityAssessments', label: 'Cloud Security Assessments' },
-        { value: 'incidentResponse', label: 'Incident Response' },
-        { value: 'managedSecurityServices', label: 'Managed Security Services' },
+        { value: 'IncidentResponse', label: 'Incident Response' },
+        { value: 'MSSP', label: 'Managed Security Services' },
         { value: 'informationSecuritySupport', label: 'Information Security Support' },
     ];
+
+    const defaultOption = options.find(option => option.value === service);
 
     const handleChange = (e) => {
         setFormState({
@@ -135,6 +154,7 @@ export default function Signup() {
                                     isMulti
                                     closeMenuOnSelect={false}
                                     onChange={handleSelectChange}
+                                    defaultValue={defaultOption}
                                 />
                             </div>
                         </div>
