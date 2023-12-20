@@ -40,6 +40,7 @@ const SubscribeForm = () => {
         } else {
             // Handle success
             console.log('Subscribed!');
+            alert('Email sent! Please check your inbox within 1-3 business days for a response.');
             setEmail(''); // Clear the input field after successful subscription
         }
     };

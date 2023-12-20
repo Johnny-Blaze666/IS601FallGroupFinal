@@ -95,7 +95,12 @@ export default function Signup() {
             body: JSON.stringify({ ...formState, services }),
         });
 
-        // Handle the response...
+        // Check if the request was successful
+        if (response.ok) {
+            alert('Email sent! Please check your inbox within 1-3 business days for a response.');
+        } else {
+            alert('An error occurred. Please try again.');
+        }
     };
 
     return (
