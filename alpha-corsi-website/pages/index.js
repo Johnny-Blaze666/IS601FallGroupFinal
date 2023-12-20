@@ -121,10 +121,10 @@ export default function Home({ allPostsData }) {
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                     >
-                        <SwiperSlide><PartnerCard image='/images/companies/CrowdStrike.svg' companyName='CrowdStrike' link='/#CrowdStrike' companyColor='#FF0000' /></SwiperSlide>
-                        <SwiperSlide><PartnerCard image='/images/companies/Microsoft.svg' companyName='Microsoft' link='/#Microsoft'/></SwiperSlide>
-                        <SwiperSlide><PartnerCard image='/images/companies/Okta.svg' companyName='Okta' link='/#Okta'/></SwiperSlide>
-                        <SwiperSlide><PartnerCard image='/images/companies/Taegis.svg' companyName='Taegis' link='/#Taegis'/></SwiperSlide>
+                        <SwiperSlide><PartnerCard image='/images/companies/CrowdStrike.svg' companyName='CrowdStrike' link='https://www.crowdstrike.com/' companyColor='#FF0000' externalLink={true} /></SwiperSlide>
+                        <SwiperSlide><PartnerCard image='/images/companies/Microsoft.svg' companyName='Microsoft' link='https://www.microsoft.com/en-us/' externalLink={true}/></SwiperSlide>
+                        <SwiperSlide><PartnerCard image='/images/companies/Okta.svg' companyName='Okta' link='https://www.okta.com' externalLink={true}/></SwiperSlide>
+                        <SwiperSlide><PartnerCard image='/images/companies/Taegis.svg' companyName='Taegis' link='https://www.secureworks.com/products/managedxdr' externalLink={true}/></SwiperSlide>
                     </Swiper>
                 </div>
 
@@ -140,7 +140,6 @@ export default function Home({ allPostsData }) {
             <div className={utilStyles.text}>
               <h4>Accolades</h4>
               <p>10 Most Promising Cybersecurity Consulting Companies</p>
-              <Link href="/#accolades">Read More</Link>
             </div>
 
           </div>
