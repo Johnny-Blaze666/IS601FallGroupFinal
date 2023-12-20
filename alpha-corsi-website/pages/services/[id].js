@@ -3,8 +3,27 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import utilStyles from '../../styles/utils.module.css';
 import Image from 'next/image';
+import Link from "next/link";
+import { useState, useEffect } from 'react';
 
 export default function Post({ postData }) {
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsSmallScreen(window.innerWidth < 768);
+        };
+
+        // Check screen size on initial render
+        checkScreenSize();
+
+        // Check screen size whenever the window is resized
+        window.addEventListener('resize', checkScreenSize);
+
+        // Clean up event listener on unmount
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+
   return (
     <Layout>
       <Head>
@@ -14,7 +33,7 @@ export default function Post({ postData }) {
         <div className={utilStyles.servicePageBackground}>
             <div className={utilStyles.servicePageSubBackground}
                  style={{
-                     backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url(${postData.imagePath})`,
+                     backgroundImage: isSmallScreen ? 'none' : `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url(${postData.imagePath})`,
                      backgroundRepeat: 'no-repeat',
                      backgroundSize: 'contain',
                      backgroundPosition: 'left'}}>
@@ -22,7 +41,10 @@ export default function Post({ postData }) {
                 <div className={utilStyles.servicePageContent}>
                     <div className={utilStyles.servicePageContentText}>
                         <h1 className={utilStyles.serviceTitle}>{postData.titleLong}</h1>
-                        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} style={{marginTop: '10%'}} />
+                        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} style={{marginTop: '10%', paddingBottom: '15%'}} />
+                        <Link href={`/signup?service=${postData.title}`} className={utilStyles.servicesLinkButton}>
+                            Sign Up
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -175,19 +175,23 @@
 
 .servicePageBackground {
   background-color: #EE9251;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+  display: flex; /* Add this */
+  justify-content: center; /* Add this */
+  align-items: center; /* Add this */
 }
 
 .servicePageSubBackground {
   display: flex;
-  height: 700px;
+  height: auto;
+  min-height: 80vh;
+  width: 80vw;
 }
 
 .servicePageEmptyLeft {
-  width: 400px;
+  width: 40%;
 }
 
 .servicePageContent {
@@ -196,8 +200,8 @@
   align-items: center;
   text-align: center;
   background-color: #F2F2F2;
-  border-radius: 20px 0 0 20px;
-  width: 1000px;
+  border-radius:  20px 0 0 20px;
+  width: 100%;
 }
 
 .servicePageContent p {
@@ -248,6 +252,26 @@
 
   .about p {
     width: 70%;
+  }
+
+  .servicePageEmptyLeft {
+    display: none;
+  }
+
+  .servicePageContent {
+    width: 80vw;
+    border-radius: 20px;
+    margin-top: 6rem;
+  }
+
+  .servicePageContent h1{
+    font-size: 22px;
+  }
+
+  .servicePageSubBackground {
+    background-image: none;
+    background-color: #EE9251;
+    padding-bottom: 20px;
   }
 
 }
