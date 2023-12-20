@@ -19,3 +19,65 @@
 .imageContent {
 
 }
+
+.form {
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+    padding: 100px 220px;
+    border-radius: 40px 0 0 40px;
+}
+
+.form h2 {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.formInputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input {
+    width: 21rem;
+    padding: 20px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.form p {
+    color: #3F3F3F;
+}
+
+.formCheckboxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.formCheckboxes > * {
+    flex: 1 0 48%; /* grow: 1, shrink: 0, basis: 48% */
+}
+
+.button {
+    margin-top: 80px;
+    width: 20rem;
+    padding: 25px 0;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #3F3F3F;
+}

@@ -77,39 +77,70 @@ export default function Signup() {
                         <p>Have more questions?</p>
                         <p>Let's get in touch!</p>
                     </div>
-                    <form onSubmit={handleSubmit}>
-                        <input type="text" name="firstName" onChange={handleChange} placeholder="First Name" required />
-                        <input type="text" name="lastName" onChange={handleChange} placeholder="Last Name" required />
-                        <input type="email" name="email" onChange={handleChange} placeholder="Email Address" required />
-                        <input type="tel" name="phoneNumber" onChange={handleChange} placeholder="Phone Number" />
-                        <input type="text" name="city" onChange={handleChange} placeholder="City" required />
-                        <input type="text" name="state" onChange={handleChange} placeholder="State" required />
-                        <label>
-                            <input type="checkbox" name="governance" checked={formState.checkboxGroup.governance} onChange={handleCheckboxChange} /> Governance
-                        </label>
-                        <label>
-                            <input type="checkbox" name="compliance" checked={formState.checkboxGroup.compliance} onChange={handleCheckboxChange} /> Compliance
-                        </label>
-                        <label>
-                            <input type="checkbox" name="riskAnalysis" checked={formState.checkboxGroup.riskAnalysis} onChange={handleCheckboxChange} /> Risk Analysis
-                        </label>
-                        <label>
-                            <input type="checkbox" name="IAM" checked={formState.checkboxGroup.IAM} onChange={handleCheckboxChange} /> Identity and Access Management
-                        </label>
-                        <label>
-                            <input type="checkbox" name="cloudSecurityAssessments" checked={formState.checkboxGroup.cloudSecurityAssessments} onChange={handleCheckboxChange} /> Cloud Security Assessments
-                        </label>
-                        <label>
-                            <input type="checkbox" name="incidentResponse" checked={formState.checkboxGroup.incidentResponse} onChange={handleCheckboxChange} /> Incident Response
-                        </label>
-                        <label>
-                            <input type="checkbox" name="managedSecurityServices" checked={formState.checkboxGroup.managedSecurityServices} onChange={handleCheckboxChange} /> Incident Response
-                        </label>
-                        <label>
-                            <input type="checkbox" name="informationSecuritySupport" checked={formState.checkboxGroup.informationSecuritySupport} onChange={handleCheckboxChange} /> Information Security Support
-                        </label>
-                        <button type="submit">Submit</button>
+
+                    <form onSubmit={handleSubmit} className={styles.form}>
+                        <h2>Contact Us</h2>
+                        <div className={styles.formInputs}>
+                            <label className={styles.label}>
+                                <p>First Name*</p>
+                                <input type="text" name="firstName" onChange={handleChange} required className={styles.input}/>
+                            </label>
+                            <label className={styles.label}>
+                                <p>Last Name*</p>
+                                <input type="text" name="lastName" onChange={handleChange} required className={styles.input}/>
+                            </label>
+                            <label className={styles.label}>
+                                <p>Email Address*</p>
+                                <input type="email" name="email" onChange={handleChange} required className={styles.input}/>
+                            </label>
+                            <label className={styles.label}>
+                                <p>Phone Number</p>
+                                <input type="tel" name="phoneNumber" onChange={handleChange} className={styles.input}/>
+                            </label>
+                            <label className={styles.label}>
+                                <p>City</p>
+                                <input type="text" name="city" onChange={handleChange} className={styles.input}/>
+                            </label>
+                            <label className={styles.label}>
+                                <p>State</p>
+                                <input type="text" name="state" onChange={handleChange} className={styles.input}/>
+                            </label>
+                        </div>
+
+                        <div style={{width: '100%'}}>
+                            <p>How can we help you?</p>
+                        </div>
+
+                        <div className={styles.formCheckboxes}>
+                            <label className={styles.label}>
+                                <input type="checkbox" name="governance" checked={formState.checkboxGroup.governance} onChange={handleCheckboxChange} /> Governance
+                            </label>
+                            <label className={styles.label}>
+                                <input type="checkbox" name="compliance" checked={formState.checkboxGroup.compliance} onChange={handleCheckboxChange} /> Compliance
+                            </label>
+                            <label className={styles.label}>
+                                <input type="checkbox" name="riskAnalysis" checked={formState.checkboxGroup.riskAnalysis} onChange={handleCheckboxChange} /> Risk Analysis
+                            </label>
+                            <label className={styles.label}>
+                                <input type="checkbox" name="IAM" checked={formState.checkboxGroup.IAM} onChange={handleCheckboxChange} /> Identity and Access Management
+                            </label>
+                            <label className={styles.label}>
+                                <input type="checkbox" name="cloudSecurityAssessments" checked={formState.checkboxGroup.cloudSecurityAssessments} onChange={handleCheckboxChange} /> Cloud Security Assessments
+                            </label>
+                            <label className={styles.label}>
+                                <input type="checkbox" name="incidentResponse" checked={formState.checkboxGroup.incidentResponse} onChange={handleCheckboxChange} /> Incident Response
+                            </label>
+                            <label className={styles.label}>
+                                <input type="checkbox" name="managedSecurityServices" checked={formState.checkboxGroup.managedSecurityServices} onChange={handleCheckboxChange} /> Managed Security Services
+                            </label>
+                            <label className={styles.label}>
+                                <input type="checkbox" name="informationSecuritySupport" checked={formState.checkboxGroup.informationSecuritySupport} onChange={handleCheckboxChange} /> Information Security Support
+                            </label>
+                        </div>
+
+                        <button type="submit"  className={styles.button}>Get Started</button>
                     </form>
+
                 </div>
             </div>
         </Layout>
