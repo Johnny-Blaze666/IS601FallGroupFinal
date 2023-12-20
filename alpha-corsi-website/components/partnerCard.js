@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './partnerCard.module.css';
 
 const size = 250;
-export default function PartnerCard({ image, companyName, companyColor, useImageSize, link }) {
+export default function PartnerCard({ image, companyName, companyColor, useImageSize, link, externalLink }) {
     return (
         <div className={styles.card}>
             <div style={{ position: 'relative', width: `${size}px`, height: `${size}px` }}>
@@ -13,7 +13,9 @@ export default function PartnerCard({ image, companyName, companyColor, useImage
 
             <div className={styles.text}>
                 <h2 style={{ color: companyColor ? companyColor : "black" }}>{companyName}</h2>
-                <Link href={link} className={styles.link}>See More &gt;</Link>
+                {externalLink ?
+                    <a href={link} target="_blank" rel="noopener noreferrer" className={styles.link}>See More &gt;</a> :
+                    <Link href={link} className={styles.link}>See More &gt;</Link>}
             </div>
         </div>
     )
