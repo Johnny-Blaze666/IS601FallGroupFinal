@@ -8,7 +8,6 @@ import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import PartnerCard from '../components/partnerCard';
 import ServiceCard from '../components/serviceCard';
-import SocialMedia from '../components/socialmedia';
 import Footer from '../components/footer';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -16,6 +15,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// Images
+import C10 from '../public/images/services/c10Icon.png';
 
 // Add this new component for the subscription form
 const SubscribeForm = () => {
@@ -60,13 +61,6 @@ const SubscribeForm = () => {
     );
 };
 export default function Home({ allPostsData }) {
-  const partners = [
-    { image: "/images/companies/CrowdStrike.svg", companyName: "CrowdStrike", companyColor: "#FF0000", link: "/#CrowdStrike" },
-    { image: "/images/companies/Microsoft.svg", companyName: "Microsoft", link: "/#Microsoft" },
-    { image: "/images/companies/Okta.svg", companyName: "Okta", link: "/#Okta" },
-    { image: "/images/companies/Taegis.svg", companyName: "Taegis", companyColor: "#2B00BB", link: "/#Taegis" },
-  ];
-
   return (
       <Layout home>
         <Head>
@@ -136,7 +130,7 @@ export default function Home({ allPostsData }) {
           <div className={utilStyles.accolades}>
             <div className={utilStyles.C10Icon}>
               <Image
-                  src="/images/services/c10Icon.png"
+                  src={C10}
                   alt="C10 Review"
                   width={300}
                   height={300}

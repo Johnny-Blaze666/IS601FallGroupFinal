@@ -3,6 +3,7 @@ import Image from "next/image";
 import aboutStyles from '../styles/about.module.css';
 import Head from "next/head";
 import Link from "next/link";
+import AboutImage from "../public/images/AboutImage.svg"
 
 export default function About() {
     return (
@@ -21,7 +22,8 @@ export default function About() {
                     </div>
                     <div className={aboutStyles.imageContainer}>
                         <Image
-                            src='/images/AboutImage.svg'
+                            priority={true}
+                            src={AboutImage}
                             alt='Hiking Snowy Mountain'
                             width={800}
                             height={500}
