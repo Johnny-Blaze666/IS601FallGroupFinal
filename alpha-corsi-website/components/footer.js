@@ -40,7 +40,7 @@ export default function Footer({ opacity }) {
                 <SocialMedia image='/images/companies/logos/linkedin.svg' link='https://linkedin.com' ariaLabel='LinkedIn' glow={glow}/>
             </div>
 
-            <p className={styles.trademark}>© 2023 AlphaCorsi</p>
+            <p className={styles.trademark}>© 2023 AlphaCorsi <Link href='/terms'>Privacy - Terms</Link></p>
 
         </div>
     )
