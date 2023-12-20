@@ -24,6 +24,7 @@ export default function Signup() {
             IAM: false,
             cloudSecurityAssessments: false,
             IncidentResponse: false,
+            penTesting: false,
             MSSP: false,
             informationSecuritySupport: false
         }
@@ -45,6 +46,7 @@ export default function Signup() {
         { value: 'governance', label: 'Governance' },
         { value: 'compliance', label: 'Compliance' },
         { value: 'riskAnalysis', label: 'Risk Analysis' },
+        { value: 'penTesting', label: 'Penetration Testing' },
         { value: 'IAM', label: 'Identity Access Management' },
         { value: 'cloudSecurityAssessments', label: 'Cloud Security Assessments' },
         { value: 'IncidentResponse', label: 'Incident Response' },

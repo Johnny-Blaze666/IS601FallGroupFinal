@@ -42,7 +42,7 @@ export default function Post({ postData }) {
                     <div className={utilStyles.servicePageContentText}>
                         <h1 className={utilStyles.serviceTitle}>{postData.titleLong}</h1>
                         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} style={{marginTop: '10%', paddingBottom: '15%'}} />
-                        <Link href={`/signup?service=${postData.title}`} className={utilStyles.servicesLinkButton}>
+                        <Link href={`/signup?service=${postData.arguments}`} className={utilStyles.servicesLinkButton}>
                             Sign Up
                         </Link>
                     </div>

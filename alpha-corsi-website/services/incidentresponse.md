@@ -1,7 +1,8 @@
 ---
-title: 'IncidentResponse'
+title: 'Incident Response'
 titleLong: 'Incident Response'
 imagePath: '/images/services/incidentResponseLarge.svg'
+arguments: 'IncidentResponse'
 ---
 
 Our Incident Response (IR) team understands the current threat landscape and will help your organization respond quickly.
