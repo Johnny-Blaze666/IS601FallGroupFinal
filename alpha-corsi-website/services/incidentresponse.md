@@ -1,11 +1,11 @@
 ---
 title: 'Incidence Response'
 titleLong: 'Incidence Response'
-imagePath: ''
+imagePath: '/images/services/incidentResponseLarge.svg'
 ---
 
-AlphaCorsi Managed Security Service Provider (MSSP) service is a trailblazer in the cybersecurity industry. It is a service that provides comprehensive security solutions to businesses of all sizes. AlphaCorsi’s MSSP service is designed to help businesses navigate the complex and ever-changing landscape of cybersecurity.
+Our Incident Response (IR) team understands the current threat landscape and will help your organization respond quickly.
 
-AlphaCorsi’s MSSP service is like a compass that guides businesses through the uncharted waters of cybersecurity. It provides businesses with 24/7 monitoring of security technologies and response to security events across a range of environments 1. The service includes patching and vulnerability management and reporting, threat intelligence, incident response, and other services 12.
+The AlphaCorsi IR team can help mitigate the impact of a malicious actor, and reinforce your security.
 
-AlphaCorsi’s MSSP service is like a seasoned explorer who has been through the toughest of terrains. It has the expertise to identify, advise and, where appropriate, respond to threats on behalf of businesses 2. AlphaCorsi’s MSSP service is a reliable partner that businesses can trust to keep their data and systems safe from cyber threats.
+Be ready for the unexpected, AlphaCorsi IR team will help you develop a plan and host table top exercises to ensure your organizations preparedness. 
