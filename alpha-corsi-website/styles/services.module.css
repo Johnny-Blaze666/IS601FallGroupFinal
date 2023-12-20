@@ -1,9 +1,9 @@
 .mainContainer {
     background-image: url('../public/images/services/pageBackground.jpg');
     background-repeat: no-repeat;
-
+    background-color: #0D0D0D;
     background-position: top;
-    padding-top: 5%;
+    padding-top: 80px;
     height: auto;
     text-align: center;
 }
@@ -57,4 +57,17 @@
 
 .footerCustomStyling {
     padding-bottom: 30vh;
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        background-image: none;
+        background-color: #99B6D4;
+    }
+
+    .headerText {
+        width: 80%;
+        margin: 0 10%;
+        padding-top: 20px;
+    }
 }
