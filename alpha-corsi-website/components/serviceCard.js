@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import styles from './serviceCard.module.css';
 export default function ServiceCard({ image, service, tagline, link  }) {

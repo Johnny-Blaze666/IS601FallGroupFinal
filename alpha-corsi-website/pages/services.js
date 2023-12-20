@@ -1,6 +1,6 @@
 import Layout, { companyName } from '../components/layout';
 import ServiceCardSignup from '../components/serviceCardSignup';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import servicesStyles from '../styles/services.module.css';
 import Footer from '../components/footer';
 import Head from "next/head";

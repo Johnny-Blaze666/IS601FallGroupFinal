@@ -2,7 +2,7 @@ import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import utilStyles from '../../styles/utils.module.css';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from 'react';
 

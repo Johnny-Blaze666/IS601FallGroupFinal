@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import styles from '../styles/subscribe.module.css';
@@ -135,7 +135,16 @@ export default function Home({ allPostsData }) {
         <div className={utilStyles.services}>
           <div className={utilStyles.accolades}>
             <div className={utilStyles.C10Icon}>
-              <Image src="/images/services/c10Icon.png" alt="C10 Review" width={300} height={300} style={{ objectFit: "cover" }} />
+              <Image
+                  src="/images/services/c10Icon.png"
+                  alt="C10 Review"
+                  width={300}
+                  height={300}
+                  style={{
+                      objectFit: "cover",
+                      maxWidth: "100%",
+                      height: "auto"
+                  }} />
             </div>
             <div className={utilStyles.text}>
               <h4>Accolades</h4>
@@ -163,7 +172,16 @@ export default function Home({ allPostsData }) {
                     "Your penetration test was one of the most comprehensive external tests that were performed
                     against our organization"
                 </h3>
-                <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} style={{ objectFit: "cover" }} />
+                <Image
+                    src="/images/people/maryL.png"
+                    alt="Mary L photo"
+                    width={70}
+                    height={70}
+                    style={{
+                        objectFit: "cover",
+                        maxWidth: "100%",
+                        height: "auto"
+                    }} />
                 <p>Mary L., CISO</p>
             </div>
 
@@ -171,7 +189,16 @@ export default function Home({ allPostsData }) {
                 <h3>
                     "Your team provided us with a new perspective and is considered beyond being compliant with the regulations"
                 </h3>
-                <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} style={{ objectFit: "cover" }} />
+                <Image
+                    src="/images/people/kristenR.png"
+                    alt="Kristen R photo"
+                    width={70}
+                    height={70}
+                    style={{
+                        objectFit: "cover",
+                        maxWidth: "100%",
+                        height: "auto"
+                    }} />
                 <p>Kristen R, VP Information Security Manager</p>
             </div>
         </div>
