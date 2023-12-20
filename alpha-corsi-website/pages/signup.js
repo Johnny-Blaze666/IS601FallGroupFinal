@@ -125,12 +125,12 @@ export default function Signup() {
                             </label>
                         </div>
 
-                        <div style={{width: '100%'}}>
+                        <div className={styles.selectServices}>
                             <div style={{width: '100%'}}>
                                 <p>How can we help you?</p>
                             </div>
 
-                            <div style={{width: '100%'}}>
+                            <div className={styles.servicesDropdown} style={{width: '100%'}}>
                                 <Select
                                     className={styles.formCheckboxes}
                                     options={options}
