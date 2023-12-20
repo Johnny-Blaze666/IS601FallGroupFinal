@@ -14,9 +14,14 @@ export default function Signup() {
         city: '',
         state: '',
         checkboxGroup: {
-            checkbox1: false,
-            checkbox2: false,
-            checkbox3: false
+            governance: false,
+            compliance: false,
+            riskAnalysis: false,
+            IAM: false,
+            cloudSecurityAssessments: false,
+            incidentResponse: false,
+            managedSecurityServices: false,
+            informationSecuritySupport: false
         }
     });
 
@@ -80,13 +85,28 @@ export default function Signup() {
                         <input type="text" name="city" onChange={handleChange} placeholder="City" required />
                         <input type="text" name="state" onChange={handleChange} placeholder="State" required />
                         <label>
-                            <input type="checkbox" name="checkbox1" checked={formState.checkboxGroup.checkbox1} onChange={handleCheckboxChange} /> Checkbox 1
+                            <input type="checkbox" name="governance" checked={formState.checkboxGroup.governance} onChange={handleCheckboxChange} /> Governance
                         </label>
                         <label>
-                            <input type="checkbox" name="checkbox2" checked={formState.checkboxGroup.checkbox2} onChange={handleCheckboxChange} /> Checkbox 2
+                            <input type="checkbox" name="compliance" checked={formState.checkboxGroup.compliance} onChange={handleCheckboxChange} /> Compliance
                         </label>
                         <label>
-                            <input type="checkbox" name="checkbox3" checked={formState.checkboxGroup.checkbox3} onChange={handleCheckboxChange} /> Checkbox 3
+                            <input type="checkbox" name="riskAnalysis" checked={formState.checkboxGroup.riskAnalysis} onChange={handleCheckboxChange} /> Risk Analysis
+                        </label>
+                        <label>
+                            <input type="checkbox" name="IAM" checked={formState.checkboxGroup.IAM} onChange={handleCheckboxChange} /> Identity and Access Management
+                        </label>
+                        <label>
+                            <input type="checkbox" name="cloudSecurityAssessments" checked={formState.checkboxGroup.cloudSecurityAssessments} onChange={handleCheckboxChange} /> Cloud Security Assessments
+                        </label>
+                        <label>
+                            <input type="checkbox" name="incidentResponse" checked={formState.checkboxGroup.incidentResponse} onChange={handleCheckboxChange} /> Incident Response
+                        </label>
+                        <label>
+                            <input type="checkbox" name="managedSecurityServices" checked={formState.checkboxGroup.managedSecurityServices} onChange={handleCheckboxChange} /> Incident Response
+                        </label>
+                        <label>
+                            <input type="checkbox" name="informationSecuritySupport" checked={formState.checkboxGroup.informationSecuritySupport} onChange={handleCheckboxChange} /> Information Security Support
                         </label>
                         <button type="submit">Submit</button>
                     </form>
