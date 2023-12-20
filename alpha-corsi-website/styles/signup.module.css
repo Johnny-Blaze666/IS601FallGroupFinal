@@ -82,7 +82,7 @@
 }
 
 .input {
-    width: 20rem;
+    width: 20vw;
     padding: 20px 10px;
     border: none;
     border-radius: 7px;
@@ -107,6 +107,10 @@
     align-items: center;
 }
 
+.selectServices {
+    width: 100%;
+}
+
 .button {
     width: 20rem;
     padding: 25px 0;
@@ -121,4 +125,73 @@
 
 .button:hover {
     background-color: #3F3F3F;
+}
+
+@media (max-width: 1350px) {
+    .mainContainer {
+        height: auto;
+        padding: 150px 0 ;
+    }
+
+    .leftContent {
+        display: none;
+    }
+
+    .content {
+        background-image: none;
+        justify-content: center;
+    }
+
+    .form {
+        border-radius: 40px;
+        height: auto;
+    }
+
+    .input {
+        width: 18rem;
+    }
+
+    .button {
+        margin: 50px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background-color: #EE9251;
+    }
+
+    .form {
+        width: 80vw;
+        height: auto;
+
+    }
+
+    .form > * {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form h2 {
+        width: 60vw;
+    }
+
+
+    .selectServices {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+    }
+
+    .servicesDropdown {
+        width: 30%;
+    }
+
+    .button {
+        width: 60vw;
+    }
 }

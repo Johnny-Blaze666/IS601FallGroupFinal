@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import Layout, { companyName } from '../components/layout';
-import Image from 'next/image';
 import styles from '../styles/signup.module.css';
 import Head from "next/head";
 import Select from 'react-select';
-import Link from "next/link";
 
 export default function Signup() {
     const [formState, setFormState] = useState({
@@ -125,12 +123,12 @@ export default function Signup() {
                             </label>
                         </div>
 
-                        <div style={{width: '100%'}}>
+                        <div className={styles.selectServices}>
                             <div style={{width: '100%'}}>
                                 <p>How can we help you?</p>
                             </div>
 
-                            <div style={{width: '100%'}}>
+                            <div className={styles.servicesDropdown} style={{width: '100%'}}>
                                 <Select
                                     className={styles.formCheckboxes}
                                     options={options}
