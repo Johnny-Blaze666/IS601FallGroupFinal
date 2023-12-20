@@ -1,21 +1,124 @@
 .mainContainer {
     background-color: #EE9251;
-    height: auto;
-    width: 100vw;
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
 }
 
 .content {
+    width: 80vw;
     display: flex;
+    justify-content: space-between;
+    background-color: #99B6D4;
+    background-image: url('../public/images/services/signup.svg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 33%;
+    position: relative;
 }
 
 .leftContent {
-    background-image: url('../public/images/services/signup.svg');
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .imageContent {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(119, 46, 46, 0.51);
+    border-radius: 10px;
+    width: 90%;
+    height: 80px;
+}
 
+.imageContent h1 {
+    font-size: 26px;
+}
+
+.textContent {
+    margin-top: auto;
+    margin-bottom: 100px;
+    height: 10%;
+    width: 100%;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textContent > * {
+    margin: 0;
+}
+
+.form {
+    width: 69%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    padding: 10px 100px;
+    border-radius: 40px 0 0 40px;
+    position: relative;
+}
+
+.form h2 {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.formInputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input {
+    width: 20rem;
+    padding: 20px 10px;
+    border: none;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.label p {
+    margin-bottom: 0;
+}
+
+.form p {
+    color: #3F3F3F;
+    margin-bottom: 0;
+}
+
+.formCheckboxes {
+    width: 100%;
+}
+
+.formCheckboxes .label {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    width: 20rem;
+    padding: 25px 0;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: #3F3F3F;
 }
