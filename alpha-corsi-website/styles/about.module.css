@@ -69,3 +69,34 @@
     justify-content: center;
 }
 
+@media (max-width: 768px) {
+    .mainContainer {
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .button {
+        margin: 0;
+    }
+
+    .text {
+        margin: 15% 0;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 35px;
+    }
+
+    .imageContainer {
+        display: none;
+    }
+
+    .buttonContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
