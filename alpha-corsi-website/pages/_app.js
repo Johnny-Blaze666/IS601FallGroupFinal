@@ -1,55 +1,100 @@
 import '../styles/global.css';
 import CookieConsent from "react-cookie-consent";
-import Image from 'next/image';
+import Image from "next/image";
+import { useState, useEffect } from 'react';
 
 export default function App({ Component, pageProps }) {
-  return (
-      <>
-          <Component {...pageProps} />
-          <CookieConsent
-              debug={true}
-              style={{
-                  background: 'rgba(255,255,255,0.85)',
-                  borderRadius: '20px',
-                  width: '90vw',
-                  margin: '10px 5vw',
-                  alignItems: 'center'
-              }}
-              buttonStyle={{
-                  color: 'white',
-                  background: '#2962FF',
-                  fontSize: '20px',
-                  height: '3rem',
-                  width: '10rem',
-                  borderRadius: '10px',
-                  font: 'Roboto',
-                  letterSpacing: '0.05rem'
-              }}
-              buttonText='ACCEPT ALL'
-              expires={30}
-              enableDeclineButton={true}
-              declineButtonText='REJECT ALL'
-              declineButtonStyle={{
-                  color: '#37474F',
-                  background: 'none',
-                  fontSize: '20px',
-                  height: '3rem',
-                  width: '10rem',
-                  borderRadius: '10px',
-                  font: 'Roboto',
-                  letterSpacing: '0.05rem'
-              }}
-              flipButtons
-          >
-              <div style={{display: 'flex', alignItems: 'center'}}>
-                  <Image src="/images/CookieIcon.svg" alt="Cookie Icon" width={50} height={50} style={{margin: '0 30px'}}/>
-                  <div style={{marginRight: '5vw'}}>
-                      <p style={{color: '#000000', fontSize: '1.5rem', margin: '0'}}>We Value</p>
-                      <p style={{color: '#222222', fontSize: '2rem', margin: '0', fontWeight:'700'}}>Your Privacy.</p>
-                  </div>
-                  <p style={{color: '#37474F', width: '20vw'}}>We collects your data in order to improve your experience in the form of cookies.</p>
-              </div>
-          </CookieConsent>
-      </>
-  );
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsSmallScreen(window.innerWidth < 768);
+        };
+
+        // Check screen size on initial render
+        checkScreenSize();
+
+        // Check screen size whenever the window is resized
+        window.addEventListener('resize', checkScreenSize);
+
+        // Clean up event listener on unmount
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+
+    return <>
+        <Component {...pageProps} />
+        <CookieConsent
+            debug={true}
+            style={{
+                background: 'rgba(255,255,255,0.85)',
+                borderRadius: '20px',
+                width: isSmallScreen ? '100vw' : '90vw',
+                margin: isSmallScreen ? '0' : '10px 5vw',
+                alignItems: 'center',
+                flexDirection: isSmallScreen ? 'column' : 'row',
+                padding: isSmallScreen ? '10px' : '20px'
+            }}
+            buttonStyle={{
+                color: 'white',
+                background: '#2962FF',
+                fontSize: isSmallScreen ? '16px' : '20px',
+                height: isSmallScreen ? '50px' : '3rem',
+                width: isSmallScreen ? '100px' : '10rem',
+                borderRadius: '10px',
+                font: 'Roboto',
+                letterSpacing: '0.05rem',
+                marginTop: isSmallScreen ? '0.5rem' : '0'
+            }}
+            buttonText='ACCEPT ALL'
+            expires={30}
+            enableDeclineButton={true}
+            declineButtonText='REJECT ALL'
+            declineButtonStyle={{
+                color: '#37474F',
+                background: 'none',
+                border: '1px black solid',
+                fontSize: isSmallScreen ? '16px' : '20px',
+                height: isSmallScreen ? '50px' : '3rem',
+                width: isSmallScreen ? '100px' : '10rem',
+                borderRadius: '10px',
+                font: 'Roboto',
+                letterSpacing: '0.05rem',
+                marginTop: isSmallScreen ? '0.5rem' : '0'
+            }}
+            flipButtons
+        >
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                flexDirection: isSmallScreen ? 'column' : 'row'
+            }}>
+                <Image
+                    src="/images/CookieIcon.svg"
+                    alt="Cookie Icon"
+                    width={isSmallScreen ? 30 : 50}
+                    height={isSmallScreen ? 30 : 50}
+                    style={{
+                        margin: '0 30px',
+                        maxWidth: "100%",
+                        height: "auto"
+                    }} />
+                <div style={{
+                    marginRight: isSmallScreen ? '0' : '5vw',
+                    textAlign: isSmallScreen ? 'center' : 'left'
+                }}>
+                    <p style={{color: '#000000', fontSize: '1.5rem', margin: '0'}}>We Value</p>
+                    <p style={{color: '#222222', fontSize: '2rem', margin: '0', fontWeight:'700'}}>Your Privacy.</p>
+                </div>
+                <p style={{
+                    color: '#37474F',
+                    width: isSmallScreen ? '80vw' : '20vw',
+                    textAlign: isSmallScreen ? 'center' : 'left',
+                    fontSize: '1rem'
+                }}>
+                    We collects your data in order to improve your experience in the form of cookies. <a>Learn More</a>
+                </p>
+
+            </div>
+        </CookieConsent>
+    </>;
 }

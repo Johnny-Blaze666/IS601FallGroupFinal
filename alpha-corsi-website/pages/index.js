@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from "next/image";
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import styles from '../styles/subscribe.module.css';
@@ -8,7 +8,6 @@ import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import PartnerCard from '../components/partnerCard';
 import ServiceCard from '../components/serviceCard';
-import SocialMedia from '../components/socialmedia';
 import Footer from '../components/footer';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -16,6 +15,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+// Images
+import C10 from '../public/images/services/c10Icon.png';
 
 // Add this new component for the subscription form
 const SubscribeForm = () => {
@@ -39,6 +40,7 @@ const SubscribeForm = () => {
         } else {
             // Handle success
             console.log('Subscribed!');
+            alert('Email sent! Please check your inbox within 1-3 business days for a response.');
             setEmail(''); // Clear the input field after successful subscription
         }
     };
@@ -60,13 +62,6 @@ const SubscribeForm = () => {
     );
 };
 export default function Home({ allPostsData }) {
-  const partners = [
-    { image: "/images/companies/CrowdStrike.svg", companyName: "CrowdStrike", companyColor: "#FF0000", link: "/#CrowdStrike" },
-    { image: "/images/companies/Microsoft.svg", companyName: "Microsoft", link: "/#Microsoft" },
-    { image: "/images/companies/Okta.svg", companyName: "Okta", link: "/#Okta" },
-    { image: "/images/companies/Taegis.svg", companyName: "Taegis", companyColor: "#2B00BB", link: "/#Taegis" },
-  ];
-
   return (
       <Layout home>
         <Head>
@@ -135,7 +130,16 @@ export default function Home({ allPostsData }) {
         <div className={utilStyles.services}>
           <div className={utilStyles.accolades}>
             <div className={utilStyles.C10Icon}>
-              <Image src="/images/services/c10Icon.png" alt="C10 Review" width={300} height={300} style={{ objectFit: "cover" }} />
+              <Image
+                  src={C10}
+                  alt="C10 Review"
+                  width={300}
+                  height={300}
+                  style={{
+                      objectFit: "cover",
+                      maxWidth: "100%",
+                      height: "auto"
+                  }} />
             </div>
             <div className={utilStyles.text}>
               <h4>Accolades</h4>
@@ -163,7 +167,16 @@ export default function Home({ allPostsData }) {
                     "Your penetration test was one of the most comprehensive external tests that were performed
                     against our organization"
                 </h3>
-                <Image src="/images/people/maryL.png" alt="Mary L photo" width={70} height={70} style={{ objectFit: "cover" }} />
+                <Image
+                    src="/images/people/maryL.png"
+                    alt="Mary L photo"
+                    width={70}
+                    height={70}
+                    style={{
+                        objectFit: "cover",
+                        maxWidth: "100%",
+                        height: "auto"
+                    }} />
                 <p>Mary L., CISO</p>
             </div>
 
@@ -171,7 +184,16 @@ export default function Home({ allPostsData }) {
                 <h3>
                     "Your team provided us with a new perspective and is considered beyond being compliant with the regulations"
                 </h3>
-                <Image src="/images/people/kristenR.png" alt="Kristen R photo" width={70} height={70} style={{ objectFit: "cover" }} />
+                <Image
+                    src="/images/people/kristenR.png"
+                    alt="Kristen R photo"
+                    width={70}
+                    height={70}
+                    style={{
+                        objectFit: "cover",
+                        maxWidth: "100%",
+                        height: "auto"
+                    }} />
                 <p>Kristen R, VP Information Security Manager</p>
             </div>
         </div>
