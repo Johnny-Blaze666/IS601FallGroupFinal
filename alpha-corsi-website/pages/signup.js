@@ -4,6 +4,7 @@ import styles from '../styles/signup.module.css';
 import Head from "next/head";
 import Select from 'react-select';
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 
 export default function Signup() {
@@ -167,6 +168,9 @@ export default function Signup() {
                         </div>
 
                         <button type="submit"  className={styles.button}>Get Started</button>
+                        <p style={{fontSize: '0.8rem', color: '#666', display: 'flex', flexDirection: 'column'}}>
+                            By providing your email, you agree that we may process your information in accordance with our <Link href='/terms'>Privacy Policy.</Link> We will use your email to send you marketing communications, which you can unsubscribe from at any time by clicking the link in the footer of our emails.
+                        </p>
                     </form>
 
                 </div>
