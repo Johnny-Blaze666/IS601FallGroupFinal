@@ -1,0 +1,21 @@
+.mainContainer {
+    background-color: #EE9251;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.content {
+    display: flex;
+}
+
+.leftContent {
+    background-image: url('../public/images/services/signup.svg');
+}
+
+.imageContent {
+
+}
