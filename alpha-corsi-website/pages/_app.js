@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }) {
               flipButtons
           >
               <div style={{display: 'flex', alignItems: 'center'}}>
-                  <Image src="images/CookieIcon.svg" alt="Cookie Icon" width={50} height={50} style={{margin: '0 30px'}}/>
+                  <Image src="/images/CookieIcon.svg" alt="Cookie Icon" width={50} height={50} style={{margin: '0 30px'}}/>
                   <div style={{marginRight: '5vw'}}>
                       <p style={{color: '#000000', fontSize: '1.5rem', margin: '0'}}>We Value</p>
                       <p style={{color: '#222222', fontSize: '2rem', margin: '0', fontWeight:'700'}}>Your Privacy.</p>

@@ -11,10 +11,23 @@ export default function Post({ postData }) {
         <title>AlphaCorsi {postData.title}</title>
       </Head>
 
-      <div className={utilStyles.servicePageContent}>
-        <h1 className={utilStyles.serviceTitle}>{postData.titleLong}</h1>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </div>
+        <div className={utilStyles.servicePageBackground}>
+            <div className={utilStyles.servicePageSubBackground}
+                 style={{
+                     backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url(${postData.imagePath})`,
+                     backgroundRepeat: 'no-repeat',
+                     backgroundSize: 'contain',
+                     backgroundPosition: 'left'}}>
+                <div className={utilStyles.servicePageEmptyLeft}></div>
+                <div className={utilStyles.servicePageContent}>
+                    <div className={utilStyles.servicePageContentText}>
+                        <h1 className={utilStyles.serviceTitle}>{postData.titleLong}</h1>
+                        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} style={{marginTop: '10%'}} />
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </Layout>
   );
 }

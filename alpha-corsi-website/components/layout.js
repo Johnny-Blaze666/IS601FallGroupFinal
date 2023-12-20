@@ -65,7 +65,7 @@ export default function Layout({ children, home }) {
                 <>
                     <div className={styles.headline}>
                         <Image
-                            src='images/navMenuMobileIcon.svg'
+                            src='/images/navMenuMobileIcon.svg'
                             alt='Navigation Menu'
                             width={50} height={50}
                             className={styles.hamburger}

@@ -1,0 +1,11 @@
+---
+title: 'MSSP'
+titleLong: 'Managed Security Service Provider'
+imagePath: ''
+---
+
+AlphaCorsi Managed Security Service Provider (MSSP) service is a trailblazer in the cybersecurity industry. It is a service that provides comprehensive security solutions to businesses of all sizes. AlphaCorsi’s MSSP service is designed to help businesses navigate the complex and ever-changing landscape of cybersecurity.
+
+AlphaCorsi’s MSSP service is like a compass that guides businesses through the uncharted waters of cybersecurity. It provides businesses with 24/7 monitoring of security technologies and response to security events across a range of environments 1. The service includes patching and vulnerability management and reporting, threat intelligence, incident response, and other services 12.
+
+AlphaCorsi’s MSSP service is like a seasoned explorer who has been through the toughest of terrains. It has the expertise to identify, advise and, where appropriate, respond to threats on behalf of businesses 2. AlphaCorsi’s MSSP service is a reliable partner that businesses can trust to keep their data and systems safe from cyber threats.
