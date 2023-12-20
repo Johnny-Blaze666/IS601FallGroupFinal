@@ -82,7 +82,7 @@
 }
 
 .input {
-    width: 20rem;
+    width: 20vw;
     padding: 20px 10px;
     border: none;
     border-radius: 7px;
@@ -121,4 +121,19 @@
 
 .button:hover {
     background-color: #3F3F3F;
+}
+
+@media (max-width: 1350px) {
+    .leftContent {
+        display: none;
+    }
+
+    .content {
+        background-image: none;
+        justify-content: center;
+    }
+
+    .form {
+        border-radius: 40px;
+    }
 }
