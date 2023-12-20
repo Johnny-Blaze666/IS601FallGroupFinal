@@ -24,9 +24,11 @@ export default function About() {
                     </div>
                 </div>
 
-                <Link href='/#free-trial' className={aboutStyles.button}>
+                <div className={aboutStyles.buttonContainer}>
+                    <Link href='/#free-trial' className={aboutStyles.button}>
                         <p className={aboutStyles.buttonText}>Start Free Trial</p>
-                </Link>
+                    </Link>
+                </div>
             </div>
 
         </Layout>
