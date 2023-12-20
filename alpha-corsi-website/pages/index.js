@@ -58,6 +58,7 @@ const SubscribeForm = () => {
                    required
             />
             <button type="submit" className={styles.button}>Contact Us</button>
+            <p>Submitting an email </p>
         </form>
     );
 };
