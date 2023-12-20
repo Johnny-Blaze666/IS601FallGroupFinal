@@ -146,13 +146,13 @@ export default function Home({ allPostsData }) {
           </div>
           <h3>Services</h3>
           <div className={utilStyles.servicesCards}>
-            <ServiceCard image="/images/services/managedSecServProv.png" service="Managed Security Service Provider" link="/#MSSP"
+            <ServiceCard image="/images/services/managedSecServProv.png" service="Managed Security Service Provider" link="/services/mssp"
                          tagline="MSSP, Extended Detection and Response, Intrusion Detection/Intrusion Prevention Systems" />
-            <ServiceCard image="/images/services/govRiskComp.png" service="Governance, Risk, and Compliance" link="/#GRC"
+            <ServiceCard image="/images/services/govRiskComp.png" service="Governance, Risk, and Compliance" link="/services/grc"
                          tagline="Gap Assessments, Risk Analysis, Compliance Framework vCISO" />
-            <ServiceCard image="/images/services/incidentResponse.png" service="Incident Response" link="/#IR"
+            <ServiceCard image="/images/services/incidentResponse.png" service="Incident Response" link="/services/incidentresponse"
                          tagline="Incident Responsse Preparation, Table Top Exercises, Security Breach Guidance" />
-            <ServiceCard image="/images/services/penTesting.png" service="Penetration Testing" link="/#PT"
+            <ServiceCard image="/images/services/penTesting.png" service="Penetration Testing" link="/services/pentesting"
                          tagline="Phishing, Vishing, Social Engineering, Security Controls Assessments" />
           </div>
             <Link href='/services' className={utilStyles.servicesLinkButton}>View All</Link>

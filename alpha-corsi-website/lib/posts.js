@@ -60,6 +60,9 @@ export async function getPostData(id) {
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
+  // Split the content into separate paragraphs
+  const paragraphs = contentHtml.split('</p>');
+
   // Combine the data with the id and contentHtml
   return {
     id,
