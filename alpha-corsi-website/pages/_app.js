@@ -37,7 +37,6 @@ export default function App({ Component, pageProps }) {
         </Script>
         <Component {...pageProps} />
         <CookieConsent
-            debug={true}
             style={{
                 background: 'rgba(255,255,255,0.85)',
                 borderRadius: '20px',
@@ -59,6 +58,8 @@ export default function App({ Component, pageProps }) {
                 marginTop: isSmallScreen ? '0.5rem' : '0'
             }}
             buttonText='ACCEPT ALL'
+            ariaAcceptLabel='Accept All'
+            ariaDeclineLabel='Reject All'
             expires={30}
             enableDeclineButton={true}
             declineButtonText='REJECT ALL'
