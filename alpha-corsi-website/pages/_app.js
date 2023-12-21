@@ -2,6 +2,7 @@ import '../styles/global.css';
 import CookieConsent from "react-cookie-consent";
 import Image from "next/image";
 import { useState, useEffect } from 'react';
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -22,6 +23,18 @@ export default function App({ Component, pageProps }) {
     }, []);
 
     return <>
+        <Script
+            strategy="afterInteractive"
+            src="https://www.googletagmanager.com/gtag/js?id=G-BFJR3JMCGV"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+            {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-BFJR3JMCGV');
+            `}
+        </Script>
         <Component {...pageProps} />
         <CookieConsent
             debug={true}
