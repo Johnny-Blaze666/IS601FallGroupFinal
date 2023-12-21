@@ -1,7 +1,7 @@
 ---
 title: 'MSSP'
 titleLong: 'Managed Security Service Provider'
-imagePath: '/images/services/managedSecServProv.svg'
+imagePath: '/images/services/managedSecServProv.png'
 arguments: 'MSSP'
 ---
 

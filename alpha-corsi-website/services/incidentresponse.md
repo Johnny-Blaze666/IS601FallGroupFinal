@@ -1,7 +1,7 @@
 ---
 title: 'Incident Response'
 titleLong: 'Incident Response'
-imagePath: '/images/services/incidentResponseLarge.svg'
+imagePath: '/images/services/incidentResponseLarge.png'
 arguments: 'IncidentResponse'
 ---
 
