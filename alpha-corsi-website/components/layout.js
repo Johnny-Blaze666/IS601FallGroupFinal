@@ -50,7 +50,7 @@ export default function Layout({ children, home }) {
                           <Link href='/' className={styles.alphacorsiNav}>ALPHACORSI</Link>
                           <Link href='/services' className={styles.otherNav}>Services</Link>
                           <Link href='/about' className={styles.otherNav}>About</Link>
-                          <Link href='/#follow-us' className={styles.otherNav}>Follow Us</Link>
+                          <Link href='/#footer' className={styles.otherNav}>Follow Us</Link>
                       </div>
 
                       <Link href='/#contact-us' className={styles.rightNavButton}>

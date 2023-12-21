@@ -36,7 +36,7 @@ export default function About() {
                 </div>
 
                 <div className={aboutStyles.buttonContainer}>
-                    <Link href='/#free-trial' className={aboutStyles.button}>
+                    <Link href='/signup' className={aboutStyles.button}>
                         <p className={aboutStyles.buttonText}>Start Free Trial</p>
                     </Link>
                 </div>
