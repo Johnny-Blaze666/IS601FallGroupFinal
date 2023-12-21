@@ -16,8 +16,8 @@ export default function About() {
                 <div className={aboutStyles.mainContent}>
                     <div className={aboutStyles.text}>
                         <h1>About AlphaCorsi</h1>
-                        <p>Founded in 2023 by experts trusted by US military and Forbes 100 companies investigate, respond and defend against significant cyberattacks. </p>
-                        <p>Today, AlphaCorsi is one of the leading Cyber Security Service organizations because of our dedicated team of experts. </p>
+                        <p>Founded in 2023 by experts trusted by the US Military and Forbes 100 companies.</p>
+                        <p>AlphaCorsi investigates, responds and defends against significant cyberattacks</p>
                         <p>Our team is passionate about delivering the best quality service to you at lower than average cost. We do not have dedicated sales staff, thus enabling us to deliver valuable service at competitive rates. </p>
                     </div>
                     <div className={aboutStyles.imageContainer}>
