@@ -16,7 +16,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // Images
-import C10 from '../public/images/services/c10Icon.png';
+import C10 from '../public/images/services/c10Icon.webp';
 
 // Add this new component for the subscription form
 const SubscribeForm = () => {
@@ -75,21 +75,23 @@ export default function Home({ allPostsData }) {
         <div className={utilStyles.mainContainer}>
           <div className={utilStyles.hero}>
             <video autoPlay muted loop playsInline className={utilStyles.video} onContextMenu={(e) => e.preventDefault()} onPlay={(e) => { e.target.controls = false; }}>
-              <source src="/heroMountainBackground.mp4" type="video/mp4"/>
+              <source src="/heroMountainBackground.webm" type="video/webm"/>
             </video>
 
             <div className={utilStyles.heroContent}>
                 <h1>AlphaCorsi</h1>
                 <p>A boutique Information Security consultancy firm</p>
-                <Link href='/about'>
+                <Link href='/about' aria-label="Who are we">
                     <div className={utilStyles.learnmoreButton}>
-                        <p className={utilStyles.learnmoreText}>Learn More</p>
+                        <p className={utilStyles.learnmoreText}>Who Are We</p>
                     </div>
                 </Link>
             </div>
           </div>
 
           <div id="about" className={utilStyles.about}>
+              <h1></h1>
+              <h2></h2>
             <h3>CyberSecurity Consulting</h3>
             <p>
               At AlphaCorsi, we are your partner in effectively implementing security technologies tailored to your
@@ -99,6 +101,8 @@ export default function Home({ allPostsData }) {
           </div>
 
         <div className={utilStyles.partners}>
+            <h1></h1>
+            <h2></h2>
             <h3>Our Trusted Partners</h3>
             <p>
                 We partner closely with leaders in the cybersecurity industry to deliver the best in class solutions to
@@ -146,27 +150,34 @@ export default function Home({ allPostsData }) {
                   }} />
             </div>
             <div className={utilStyles.text}>
+                <h1></h1>
+                <h2></h2>
+                <h3></h3>
               <h4>Accolades</h4>
               <p>10 Most Promising Cybersecurity Consulting Companies</p>
             </div>
 
           </div>
+            <h1></h1>
+            <h2></h2>
           <h3>Services</h3>
           <div className={utilStyles.servicesCards}>
-            <ServiceCard image="/images/services/managedSecServProv.png" service="Managed Security Service Provider" link="/services/mssp"
-                         tagline="MSSP, Extended Detection and Response, Intrusion Detection/Intrusion Prevention Systems" />
-            <ServiceCard image="/images/services/govRiskComp.png" service="Governance, Risk, and Compliance" link="/services/grc"
-                         tagline="Gap Assessments, Risk Analysis, Compliance Framework vCISO" />
-            <ServiceCard image="/images/services/incidentResponse.png" service="Incident Response" link="/services/incidentresponse"
-                         tagline="Incident Responsse Preparation, Table Top Exercises, Security Breach Guidance" />
-            <ServiceCard image="/images/services/penTesting.png" service="Penetration Testing" link="/services/pentesting"
-                         tagline="Phishing, Vishing, Social Engineering, Security Controls Assessments" />
+            <ServiceCard image="/images/services/managedSecServProv.webp" service="Managed Security Service Provider" link="/services/mssp"
+                         tagline="MSSP, Extended Detection and Response, Intrusion Detection/Intrusion Prevention Systems" aria="Managed Security Service Provider"/>
+            <ServiceCard image="/images/services/govRiskComp.webp" service="Governance, Risk, and Compliance" link="/services/grc"
+                         tagline="Gap Assessments, Risk Analysis, Compliance Framework vCISO" aria="Governance, Risk, and Compliance"/>
+            <ServiceCard image="/images/services/incidentResponse.webp" service="Incident Response" link="/services/incidentresponse"
+                         tagline="Incident Responsse Preparation, Table Top Exercises, Security Breach Guidance" aria="Incident Response"/>
+            <ServiceCard image="/images/services/penTesting.webp" service="Penetration Testing" link="/services/pentesting"
+                         tagline="Phishing, Vishing, Social Engineering, Security Controls Assessments" aria="Penetration Testing"/>
           </div>
             <Link href='/services' className={utilStyles.servicesLinkButton}>View All</Link>
         </div>
 
         <div className={utilStyles.testimonials}>
             <div className={utilStyles.testimonial}>
+                <h1></h1>
+                <h2></h2>
                 <h3>
                     "Your penetration test was one of the most comprehensive external tests that were performed
                     against our organization"
@@ -185,6 +196,8 @@ export default function Home({ allPostsData }) {
             </div>
 
             <div className={utilStyles.testimonial}>
+                <h1></h1>
+                <h2></h2>
                 <h3>
                     "Your team provided us with a new perspective and is considered beyond being compliant with the regulations"
                 </h3>

@@ -30,7 +30,7 @@ export default function Layout({ children, home }) {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta
-            name="AlphaCorsi"
+            name="description"
             content="Secure your business with an extensive array of services."
           />
           <meta
