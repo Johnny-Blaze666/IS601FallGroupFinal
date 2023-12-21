@@ -73,7 +73,7 @@ export default function Home({ allPostsData }) {
 
         <div className={utilStyles.mainContainer}>
           <div className={utilStyles.hero}>
-            <video autoPlay muted loop className={utilStyles.video}>
+            <video autoPlay muted loop playsInline className={utilStyles.video} onContextMenu={(e) => e.preventDefault()} onPlay={(e) => { e.target.controls = false; }}>
               <source src="/heroMountainBackground.mp4" type="video/mp4"/>
             </video>
 
