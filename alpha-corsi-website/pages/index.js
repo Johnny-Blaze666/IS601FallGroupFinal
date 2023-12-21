@@ -37,6 +37,7 @@ const SubscribeForm = () => {
         if (data.error) {
             // Handle error
             console.error(data.error);
+            alert('Invalid email. Please verify your spelling and submit again.');
         } else {
             // Handle success
             console.log('Subscribed!');
