@@ -1,7 +1,7 @@
 ---
 title: 'Governance'
 titleLong: 'Governance, Risk, and Compliance'
-imagePath: '/images/services/govRiskComp.svg'
+imagePath: '/images/services/govRiskComp.png'
 arguments: 'governance&service2=riskAnalysis&service3=compliance'
 ---
 

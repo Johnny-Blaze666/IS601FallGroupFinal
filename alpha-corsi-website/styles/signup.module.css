@@ -12,10 +12,10 @@
     display: flex;
     justify-content: space-between;
     background-color: #99B6D4;
-    background-image: url('../public/images/services/signup.svg');
+    background-image: url('../public/images/services/signup.png');
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: 33%;
+    background-size: 37%;
     position: relative;
 }
 

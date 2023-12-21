@@ -3,7 +3,7 @@ import Image from "next/image";
 import aboutStyles from '../styles/about.module.css';
 import Head from "next/head";
 import Link from "next/link";
-import AboutImage from "../public/images/AboutImage.svg"
+import AboutImage from "../public/images/AboutImage.png"
 
 export default function About() {
     return (
