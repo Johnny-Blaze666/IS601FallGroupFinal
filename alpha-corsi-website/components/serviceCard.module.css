@@ -29,3 +29,9 @@
 .link {
     color: white;
 }
+
+@media (max-width: 700px) {
+    .text > * {
+        font-size: 1.1rem;
+    }
+}
